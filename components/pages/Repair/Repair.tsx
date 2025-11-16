@@ -22,7 +22,7 @@ const slide:Comparison[]= comparisonData;
 export default function Repair() {
     return <>
             <section className={`${classes.video_bg}`}>
-        <video src="/video/repair/fon-repair.mp4" autoPlay muted loop></video>
+        <video src="/video/repair/fon-repair.mp4" autoPlay muted loop playsInline webkit-playsinline></video>
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
             <h1>Ремонт квартир и отделка интерьеров</h1>
