@@ -1,0 +1,46 @@
+.form__blank {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.21);
+    padding: 2rem;
+}
+
+.details{
+    resize: none;
+}
+
+.btn__ask {
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(0.25turn, #3f485a, #707a8f);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.input{
+  border:1px solid #707a8f;
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background: #e9eaec;
+}
+
+.input:focus{
+    border: 2px solid #3f485a ;
+    outline: none;
+}
+
+.btn__ask span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn__ask:hover {
+    opacity: .9;
+}

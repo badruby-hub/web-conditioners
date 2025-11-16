@@ -1,26 +1,88 @@
-@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  font-family: "Poppins";
+}
+
+
+
+main {
+  flex-grow: 1;
+}
+
+.footer {
+  background: #e5e5e5;
+  padding-inline: 15px;
+  flex-shrink: 0;
+}
+
+.footer a {
+  color: #707a8f;
+  text-decoration: none;
+}
+
+.swiper {
+  width: 85vw;
+  max-width: 850px;
+  height: 100%;
+  box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.21);
+  border-radius: 10px;
+  background: #e9eaec;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  font-size: 18px;
+}
+
+
+.my-prev,
+.my-next {
+  background: #e9eaec;
+  padding-inline: 10px;
+  border-radius: 50px;
+  font-size: 22px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.portfolio-prev, .history-prev,
+.portfolio-next, .history-next {
+  background: #e9eaec;
+  padding-inline: 10px;
+  border-radius: 50px;
+  font-size: 22px;
+  user-select: none;
+  cursor: pointer;
+}
+
+
+ .history-prev,
+ .history-next {
+  background: #c5c8ce;
+  padding-inline: 10px;
+  border-radius: 50px;
+  font-size: 22px;
+  user-select: none;
+  cursor: pointer;
+}
+
+
+@media(min-width:920px){
+
 }

@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "left": "/portfolio/split/one.jpeg",
+    "right": "/portfolio/split/two.jpeg"
+  },
+  {
+    "id": 2,
+    "left": "/portfolio/split/three.jpeg",
+    "right": "/portfolio/split/four.jpeg"
+  },
+  {
+    "id": 3,
+    "left": "/portfolio/split/five.jpeg",
+    "right": "/portfolio/split/six.jpeg"
+  }
+]
