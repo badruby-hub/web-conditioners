@@ -22,7 +22,7 @@ export default function Main() {
     return <>
        {/*video bg*/}
       <section className={`${classes.video_bg}`}>
-        <video src="/video/video-bg-fon-6.mp4" autoPlay muted loop playsInline webkit-playsinline></video>
+        <video poster="/video/video-bg-fon-6.mp4" autoPlay muted loop preload="auto" playsInline webkit-playsinline></video>
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
             <h1>moduhause</h1>
