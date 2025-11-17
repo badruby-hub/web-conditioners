@@ -2,11 +2,22 @@
 
 import { Calculator, PhoneCall, Settings, Shield, Thermometer, Wind, Zap } from "lucide-react";
 import classes from "./conditioners.module.css";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
 
 export default function Main() {
     return <>
         <section className={`${classes.video_bg}`}>
-        <video poster="/video/conditioners/conditioners.mp4" autoPlay muted loop preload="auto" playsInline webkit-playsinline></video>
+        <ReactPlayer 
+         src="/video/conditioners/conditioners.mp4"
+         playing
+         muted
+         loop
+         playsInline
+         width="100%"
+         height="100%"
+        />
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
             <h1>Установка и ремонт канальных кондиционеров</h1>

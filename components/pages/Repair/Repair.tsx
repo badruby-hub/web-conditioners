@@ -15,6 +15,9 @@ import { Comparison,History } from "./repair.props";
 
 import successStoryData from "@/components/data/SuccessStory.json";
 import Form from "@/components/form/Form";
+import dynamic from "next/dynamic";
+
+const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
 
 const history:History[]= successStoryData;
 const slide:Comparison[]= comparisonData;
@@ -22,7 +25,15 @@ const slide:Comparison[]= comparisonData;
 export default function Repair() {
     return <>
             <section className={`${classes.video_bg}`}>
-        <video poster="/video/repair/fon-repair.mp4" autoPlay muted loop preload="auto" playsInline webkit-playsinline></video>
+        <ReactPlayer 
+             src="/video/repair/fon-repair.mp4"
+             playing
+             muted
+             loop
+             playsInline
+             width="100%"
+             height="100%"
+             />
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
             <h1>Ремонт квартир и отделка интерьеров</h1>
