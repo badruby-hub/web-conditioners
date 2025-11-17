@@ -6,29 +6,29 @@ import { useEffect, useRef, useState } from "react";
 import { Globe, PhoneCall } from "lucide-react";
 
 export default function NavHeader() {
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   const [active, setActive] = useState(false);
-  useEffect(()=>{
+  // useEffect(()=>{
 
-    const handleScroll =() =>{
-      let h = window.scrollY > 86.4;
-      if(h) {
-       setIsScrolled(true);
-      }else{
-        setIsScrolled(false)
-      }
-    }
-     handleScroll();
+  //   const handleScroll =() =>{
+  //     let h = window.scrollY > 86.4;
+  //     if(h) {
+  //      setIsScrolled(true);
+  //     }else{
+  //       setIsScrolled(false)
+  //     }
+  //   }
+  //    handleScroll();
      
-     window.addEventListener("scroll", handleScroll);
+  //    window.addEventListener("scroll", handleScroll);
      
 
-     return () => window.removeEventListener("scroll", handleScroll);
+  //    return () => window.removeEventListener("scroll", handleScroll);
 
 
-  },[]);
+  // },[]);
   return (
-    <header   className={`${classes.header} ${isScrolled ? classes.head__fixed : ""}`}>
+    <header   className={`${classes.header}`}>
       <nav  className={`${classes.nav}`}>
         <Link href="/">
           <div className={classes.block__img}>

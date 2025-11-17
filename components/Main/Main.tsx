@@ -33,7 +33,7 @@ export default function Main() {
              />
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
-            <h1>moduhause</h1>
+            <h1>moduhaus</h1>
             <p> современные решения для вашего климата и комфорта в Дубае</p>
             <button className={classes.btn__ask}><span>Получить консультацию</span></button>
         </div>
