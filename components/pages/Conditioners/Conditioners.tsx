@@ -3,10 +3,12 @@
 import { Calculator, PhoneCall, Settings, Shield, Thermometer, Wind, Zap } from "lucide-react";
 import classes from "./conditioners.module.css";
 import dynamic from "next/dynamic";
+import { useTranslation } from "react-i18next";
 
 const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
 
 export default function Main() {
+   const {t} = useTranslation();
     return <>
         <section className={`${classes.video_bg}`}>
         <ReactPlayer 
@@ -20,150 +22,146 @@ export default function Main() {
         />
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
-            <h1>Установка и ремонт канальных кондиционеров</h1>
-            <p>Профессиональные решения климат-контроля для домов и бизнеса в Дубае</p>
-            <button className={classes.btn__ask}><span><PhoneCall size={17}/>Вызвать специалиста</span></button>
+            <h1>{t("ducted ac")}</h1>
+            <p>{t("professional climate")}</p>
+            <button className={classes.btn__ask}><span><PhoneCall size={17}/>{t("request a technician")}</span></button>
         </div>
       </section>
       {/* BLOCK-2 */}
       <section className={classes.container__one}>
         <div className={classes.block__zagolovok}>
             <h1>
-                Наши услуги 
+                {t("our ac services")} 
             </h1>
-            <p>Комплексные решения для всех ваших потребностей в кондиционировании</p>
+            <p>{t("comprehensive solutions")}</p>
         </div>
             <div className={classes.section__card__one}>
                        <div className={`${classes.card__premium} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
                           <Wind size={34}/>
                           </div>
-                          <h5>Установка канальных систем</h5>
-                          <p>Полная установка канальных систем кондиционирования для жилых и коммерческих объектов.
-                             Энергоэффективные решения для вашего пространства.</p>
+                          <h5>{t("ducted ac installation")}</h5>
+                          <p>{t("complete installation")}</p>
                        </div>
                        <div className={`${classes.card__fast__service} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
                            <Settings size={34}/>
                           </div>
-                          <h5>Ремонт и обслуживание</h5>
-                          <p>Экспертный ремонт и регулярное обслуживание для поддержания системы в отличном состоянии.
-                             Доступно 24/7 для экстренных случаев.</p>
+                          <h5>{t("ac repair")}</h5>
+                          <p>{t("expert repair")}</p>
                        </div>
                        <div className={`${classes.card__extended__warranty} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
                            <Thermometer size={34}/>
                           </div>
-                          <h5>Диагностика систем</h5>
-                          <p>Передовые инструменты диагностики для быстрого
-                             и эффективного выявления и решения проблем с вашей системой.</p>
+                          <h5>{t("system diagnostics")}</h5>
+                          <p>{t("advanced diagnostic")}</p>
                        </div>
                        <div className={`${classes.card__team__experts} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
                             <Zap size={34}/>
                           </div>
-                          <h5>Оптимизация энергии</h5>
-                          <p>Оптимизация вашей системы для максимальной энергоэффективности,
-                             снижая счета за электричество при сохранении идеального комфорта.</p>
+                          <h5>{t("energy optimization")}</h5>
+                          <p>{t("optimize your")}</p>
                        </div>
             </div>
       </section>
          {/*BLOCK-3*/}
 
       <section className={classes.container__two}>
-        <h1>Преимущества канальных систем</h1>
+        <h1>{t("why ducted")}</h1>
         {/*секция карточек*/}
         <div className={classes.section__card__two}>
         <div className={`${classes.card}`}>
             <div className={classes.bg_container_svg}>
                <Shield/>
             </div>
-            <h3>Невидимый дизайн</h3>
-            <p>Незаметные потолочные решетки сохраняют эстетику интерьера</p>
+            <h3>{t("invisible design")}</h3>
+            <p>{t("discreet ceiling")}</p>
         </div>
         <div className={`${classes.card}`}>
            <div className={classes.bg_container_svg}>
                <Shield/>
             </div>
-              <h3>Комфорт во всём доме</h3>
-            <p>Равномерная температура по всей вашей собственности</p>
+              <h3>{t("whole home")}</h3>
+            <p>{t("consistent temperature")}</p>
         </div>
         <div className={`${classes.card}`}>
             <div className={classes.bg_container_svg}>
                <Shield/>
             </div>
-              <h3>Энергоэффективность</h3>
-            <p>Низкие эксплуатационные расходы по сравнению с несколькими сплит-системами</p>
+              <h3>{t("energy efficient")}</h3>
+            <p>{t("lower running")}</p>
         </div>
         <div className={`${classes.card}`}>
            <div className={classes.bg_container_svg}>
                <Shield/>
             </div>
-              <h3>Тихая работа</h3>
-            <p>Минимальный шум для спокойной жизни и работы</p>
+              <h3>{t("quiet operation")}</h3>
+            <p>{t("minimal noise")}</p>
         </div>
         </div>
       </section>
       {/* BLOCK-4  */}
        <section className={classes.container__three}>
            <h1>
-             Тарифные планы
+             {t("pricing plans")}
            </h1>
            {/* карточки прайса */}
            <div className={classes.section__card}>
                 <article className={classes.price__card}>
                    <header className={classes.header}>
-                       <h2>Базовое обслуживание</h2>
-                       <p>Основное обслуживание и проверка</p>
+                       <h2>{t("basic service")}</h2>
+                       <p>{t("essential maintenance")}</p>
                    </header>
                    <ul className={classes.price__features}>
-                    <li><Shield/>Полная проверка системы</li>
-                    <li><Shield/>Чистка/замена фильтров</li>
-                    <li><Shield/>Проверка уровня хладагента</li>
-                    <li><Shield/>Базовая диагностика</li>
-                    <li><Shield/>Гарантия 30 дней</li>
+                    <li><Shield/>{t("complete system")}</li>
+                    <li><Shield/>{t("filter cleaning")}</li>
+                    <li><Shield/>{t("coolant level")}</li>
+                    <li><Shield/>{t("basic troubleshooting")}</li>
+                    <li><Shield/>{t("30-day")}</li>
                    </ul>
                    <footer className={classes.footer}>
                       <button className={classes.price__btn}>
-                                 <Calculator size={20}/><span>Расчитать</span>
+                                 <Calculator size={20}/><span>{t("get quote")}</span>
                       </button>
                    </footer>
                 </article>
                 <article className={classes.price__card}>
                    <header className={classes.header}>
-                       <h2>Премиум обслуживание</h2>
-                       <p>Комплексный пакет обслуживания</p>
+                       <h2>{t("premium service")}</h2>
+                       <p>{t("comprehensive")}</p>
                    </header>
                    <ul className={classes.price__features}>
-                    <li><Shield/>Всё из Базового</li>
-                    <li><Shield/>Глубокая очистка системы</li>
-                    <li><Shield/>Оптимизация производительности</li>
-                    <li><Shield/>Проверка воздуховодов</li>
-                    <li><Shield/>Гарантия 6 месяцев</li>
-                    <li><Shield/>Приоритетная поддержка</li>
+                    <li><Shield/>{t("everything in basic")}</li>
+                    <li><Shield/>{t("deep system")}</li>
+                    <li><Shield/>{t("performance optimization")}</li>
+                    <li><Shield/>{t("duct inspection")}</li>
+                    <li><Shield/>{t("6-month warranty")}</li>
+                    <li><Shield/>{t("priority support")}</li>
                    </ul>
                    <footer className={classes.footer}>
                       <button className={classes.price__btn}>
-                                 <Calculator size={20}/><span>Расчитать</span>
+                                 <Calculator size={20}/><span>{t("get quote")}</span>
                       </button>
                    </footer>
                 </article>
                 <article className={classes.price__card}>
                    <header className={classes.header}>
-                       <h2>Установка</h2>
-                       <p>Полная установка канальной системы</p>
+                       <h2>{t("installation")}</h2>
+                       <p>{t("complete ducted")}</p>
                    </header>
                    <ul className={classes.price__features}>
-                    <li><Shield/>Бесплатная консультация</li>
-                    <li><Shield/>Индивидуальный проект</li>
-                    <li><Shield/>Профессиональная установка</li>
-                    <li><Shield/>Тестирование системы</li>
-                    <li><Shield/>Гарантия 5 лет</li>
-                    <li><Shield/>Поддержка 24/7</li>
+                    <li><Shield/>{t("free consultation")}</li>
+                    <li><Shield/>{t("custom system")}</li>
+                    <li><Shield/>{t("professional installation")}</li>
+                    <li><Shield/>{t("system testing")}</li>
+                    <li><Shield/>{t("5-year warranty")}</li>
+                    <li><Shield/>{t("24/7 support")}</li>
                    </ul>
                    <footer className={classes.footer}>
                       <button className={classes.price__btn}>
-                                 <Calculator size={20}/><span>Расчитать</span>
+                                 <Calculator size={20}/><span>{t("get quote")}</span>
                       </button>
                    </footer>
                 </article>

@@ -7,7 +7,14 @@
     padding: 2rem;
 }
 
-.details{
+.name_and_number {
+    display: flex;
+    gap: 10px;
+}
+
+.name_and_number input {}
+
+.details {
     resize: none;
 }
 
@@ -21,17 +28,17 @@
     cursor: pointer;
 }
 
-.input{
-  border:1px solid #707a8f;
-  outline: none;
-  border-radius: 5px;
-  padding: 5px 10px;
-  background: #e9eaec;
+.input {
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #e9eaec;
+    flex-grow: 1;
 }
 
-.input:focus{
-    border: 2px solid #3f485a ;
-    outline: none;
+.input:focus-visible {
+    outline: 1px solid #3f485a;
 }
 
 .btn__ask span {

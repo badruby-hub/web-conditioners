@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import NavHeader from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import "./i18n";
+import i18n from "./i18n";
+import I18nProvider from "@/components/I18nProvider/I18nProvider";
 
 
 export const metadata: Metadata = {
@@ -31,13 +34,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+              <I18nProvider>
           <NavHeader/>
         <main>
-           {children}
+            {children}
         </main>
         <footer className="footer">
            <Footer/>
-        </footer>     
+        </footer> 
+        </I18nProvider>    
       </body>
     </html>
   );

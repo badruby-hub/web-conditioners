@@ -2,8 +2,13 @@
 import Link from "next/link";
 import classes from "./header.module.css";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
-import { useEffect, useRef, useState } from "react";
+import {useState } from "react";
 import { Globe, PhoneCall } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { toggleBtn } from "../utils/Button/toggleLanguage";
+
+
+
 
 export default function NavHeader() {
   // const [isScrolled, setIsScrolled] = useState(false);
@@ -27,6 +32,10 @@ export default function NavHeader() {
 
 
   // },[]);
+
+  const {t} = useTranslation();
+
+
   return (
     <header   className={`${classes.header}`}>
       <nav  className={`${classes.nav}`}>
@@ -46,13 +55,13 @@ export default function NavHeader() {
             {active ? <RxCross1 /> : <RxHamburgerMenu />}
           </li>
           <ul className={`${active ? classes.container__navbar__active : classes.container__navbar}`}>
-            <li><Link href="/">Главная</Link></li>
-            <li><Link href="conditioners">Кондиционеры</Link></li>
-            <li><Link href="repair">Ремонт</Link></li>
+            <li><Link href="/">{t("home")}</Link></li>
+            <li><Link href="conditioners">{t("conditioners")}</Link></li>
+            <li><Link href="repair">{t("repair")}</Link></li>
             <li>
               <div className={classes.block__btn__navbar}>
-                   <button className={classes.language__change}><Globe size={20}/>RU</button>
-                   <button className={classes.btn__ask}><span><PhoneCall size={17}/>Связаться</span></button>
+                   <button onClick={toggleBtn} className={classes.language__change}><Globe size={20}/>{t("translate")}</button>
+                   <button className={classes.btn__ask}><span><PhoneCall size={17}/>{t("contact")}</span></button>
              </div>
       </li>
           </ul>
@@ -60,21 +69,20 @@ export default function NavHeader() {
         {/* основное меню */}
         <ul className={classes.page__navigation}>
           <li>
-            <Link href="/">Главная</Link>
+            <Link href="/">{t("home")}</Link>
           </li>
           <li>
-            <Link href="conditioners">Кондиционеры</Link>
+            <Link href="conditioners">{t("conditioners")}</Link>
           </li>
           <li>
-            <Link href="repair">Ремонт</Link>
+            <Link href="repair">{t("repair")}</Link>
           </li>
         </ul>
       <div className={classes.block__btn__learn__and__ask}>
-         <button className={classes.language__change}><Globe size={20}/>RU</button>
-         <button className={classes.btn__ask}><span><PhoneCall size={17}/>Связаться</span></button>
+         <button onClick={toggleBtn} className={classes.language__change}><Globe size={20}/>{t("translate")}</button>
+         <button className={classes.btn__ask}><span><PhoneCall size={17}/>{t("contact")}</span></button>
       </div>
       </nav>
-
     </header>
   );
 }

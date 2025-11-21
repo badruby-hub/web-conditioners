@@ -1,5 +1,6 @@
+ type Lang = "ru" | "en";
 export interface Reviews  {
    id: number,
-   text: string,
-   author: string,
+   text: Record<Lang,string>,
+   author: Record<Lang,string>,
 }

@@ -4,9 +4,11 @@
 import Link from "next/link";
 import classes from "./footer.module.css";
 import { Facebook, Instagram, Mail, MapPin, Phone, Send } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 
 export default function Footer() {
+  const {t} = useTranslation();
     return <>
     <section className={classes.container__footer}>
       <section className={classes.one__block__footer}>
@@ -15,21 +17,21 @@ export default function Footer() {
         <img src="/logo/black/home-256.png" alt="Логотип" />
       </div>
       </Link>
-      <p className={`${classes.text} ${classes.text__one__block}`}>Современные решения для вашего климата и комфорта в Дубае</p>
+      <p className={`${classes.text} ${classes.text__one__block}`}>{t("modern solutions")}</p>
     </section>
      <section className={classes.fast__nav}>
-        <h2 className={classes.h__two}>Быстрые ссылки</h2>
+        <h2 className={classes.h__two}>{t("quick links")}</h2>
         <ul>
-          <li className={`${classes.text} ${classes.text__home}`}><Link href="/">Главная</Link></li>
-          <li className={`${classes.text} ${classes.text__conditioners}`}><Link href="conditioners">Кондиционеры</Link></li>
-          <li className={`${classes.text} ${classes.text__repair}`}><Link href="repair">Ремонт</Link></li>
+          <li className={`${classes.text} ${classes.text__home}`}><Link href="/">{t("home")}</Link></li>
+          <li className={`${classes.text} ${classes.text__conditioners}`}><Link href="conditioners">{t("conditioners")}</Link></li>
+          <li className={`${classes.text} ${classes.text__repair}`}><Link href="repair">{t("repair")}</Link></li>
         </ul>
      </section>
      <section className={classes.contacts}>
-        <h2 className={classes.h__two}>Контактная информация</h2>
+        <h2 className={classes.h__two}>{t("contact information")}</h2>
         <ul>
           <li className={`${classes.text} ${classes.text__maps}`}>
-           <MapPin className={classes.icon}/><Link href="https://maps.app.goo.gl/mQw4XV5hLBMGoVJB7" target="_blank" rel="noopener noreferrer">Дубай</Link>
+           <MapPin className={classes.icon}/><Link href="https://maps.app.goo.gl/mQw4XV5hLBMGoVJB7" target="_blank" rel="noopener noreferrer">{t("geo")}</Link>
           </li>
           <li  className={`${classes.text} ${classes.text__number}`}>
           <Phone className={classes.icon}/><Link href="tel:+79962042046">+7&#40;996&#41;204-20-46</Link>
@@ -40,7 +42,7 @@ export default function Footer() {
         </ul>
      </section>
           <section className={classes.media}>
-        <h2 className={classes.h__two}>Подписывайтесь</h2>
+        <h2 className={classes.h__two}>{t("follow")}</h2>
         <ul>
           <li className={`${classes.text} ${classes.text__facebook} ${classes.block__media}`}>
          <Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><Facebook className={`${classes.facebook} ${classes.icon}`}/></Link>
@@ -55,6 +57,6 @@ export default function Footer() {
      </section>
     </section>
      <hr />
-     <p className={classes.rights}>© 2025 ModuHaus. Все права защищены.</p>
+     <p className={classes.rights}>© 2025 MODUHAUS.{t("rights reserved")}</p>
     </>
 }

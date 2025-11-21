@@ -3,9 +3,11 @@ export interface Comparison{
     left: string,
     right:string,
 }
+type Lang = "ru"| "en";
+
 
 export interface History{
     id: number,
-    text: string,
-    author:string,
+    text: Record<Lang, string>,
+    author: Record <Lang,string>,
 }

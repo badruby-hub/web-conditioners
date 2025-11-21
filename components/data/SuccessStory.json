@@ -1,22 +1,46 @@
- [
+[
   {
     "id": 1,
-    "text" : "ModuHaus преобразили нашу виллу превосходной установкой канального кондиционера. Команда была профессиональной, пунктуальной, результат превзошел наши ожидания.",
-    "author":  "Ахмед Аль-Мансури"
-},
+    "text": {
+      "ru": "ModuHaus преобразили нашу виллу превосходной установкой канального кондиционера. Команда была профессиональной, пунктуальной, результат превзошел наши ожидания.",
+      "en": "ModuHaus transformed our villa with a superb ducted air conditioning installation. The team was professional, punctual, and the results exceeded our expectations."
+    },
+    "author": {
+      "ru": "Ахмед Аль-Мансури",
+      "en": "Ahmed Al-Mansouri"
+    }
+  },
   {
     "id": 2,
-    "text" : "Быстрый, эффективный и качественный ремонт кондиционера. Они сразу диагностировали проблему и исправили её в тот же день. Очень впечатлён профессионализмом." ,
-    "author":  "Мохаммед Хассан"
-},
+    "text": {
+      "ru": "Быстрый, эффективный и качественный ремонт кондиционера. Они сразу диагностировали проблему и исправили её в тот же день. Очень впечатлён профессионализмом.",
+      "en": "Fast, efficient, and high-quality air conditioner repair. They diagnosed the problem immediately and fixed it the same day. Very impressed with their professionalism."
+    },
+    "author": {
+      "ru": "Мохаммед Хассан",
+      "en": "Mohammed Hassan"
+    }
+  },
   {
     "id": 3,
-    "text" : "Ремонт был выдающимся! От концепции до завершения каждая деталь обрабатывалась с заботой. Наша квартира теперь выглядит как люксовый номер отеля!",
-    "author":  "Сара Джонсон"
-},
+    "text": {
+      "ru": "Ремонт был выдающимся! От концепции до завершения каждая деталь обрабатывалась с заботой. Наша квартира теперь выглядит как люксовый номер отеля!",
+      "en": "The renovation was outstanding! From concept to completion, every detail was handled with care. Our apartment now looks like a luxury hotel room!"
+    },
+    "author": {
+      "ru": "Сара Джонсон",
+      "en": "Sarah Johnson"
+    }
+  },
   {
     "id": 4,
-    "text" : "Отделочные работы были безупречны. ModuHaus прекрасно поняли мое видение и превзошли мои ожидания. Внимание к деталям замечательное.",
-    "author":  "Елена Петрова"
-}
+    "text":{ 
+      "ru":"Отделочные работы были безупречны. ModuHaus прекрасно поняли мое видение и превзошли мои ожидания. Внимание к деталям замечательное.",
+      "en":"The finishing work was impeccable. ModuHaus perfectly understood my vision and exceeded my expectations. The attention to detail was remarkable."
+  },
+     "author": {
+      "ru": "Елена Петрова",
+      "en": "Elena Petrova"
+    }
+  }
 ]

@@ -11,6 +11,10 @@ import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Star } from "lucide-react";
 import Link from "next/link";
 import { Reviews } from "./main.props";
+import { useTranslation } from "react-i18next";
+import i18n from "@/app/i18n";
+
+type Lang = "ru" | "en";
 
 const reviews: Reviews[] = reviewsData; 
 
@@ -18,6 +22,7 @@ const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
 
 
 export default function Main() {
+    const {t, i18n} = useTranslation();
 
     return <>
        {/*video bg*/}
@@ -34,23 +39,18 @@ export default function Main() {
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
             <h1>moduhaus</h1>
-            <p> современные решения для вашего климата и комфорта в Дубае</p>
-            <button className={classes.btn__ask}><span>Получить консультацию</span></button>
+            <p>{t("modern")}</p>
+            <button className={classes.btn__ask}><span>{t("get consultation")}</span></button>
         </div>
       </section>
            {/*BLOCK-1*/}
       <section className={classes.container__one}>
-        <h1>О компаниии <span>ModuHaus</span></h1>
+        <h1>{t("about")}<span>Moduhaus</span></h1>
         <p className={classes.block__p__one}>
-           Мы - ведущий поставщик канальных систем кондиционирования и премиальных ремонтных услуг в Дубае.
-           С многолетним опытом работы на рынке ОАЭ, мы обеспечиваем исключительное качество,
-           инновационные решения и непревзойденный сервис.
+          {t("we are")}
         </p>
         <p className={classes.block__p__two}>
-           Наша миссия - создавать комфортные,
-           энергоэффективные жилые пространства,
-           отражающие современную роскошь,
-           которой славится Дубай.
+           {t("our mission")}
         </p>
         {/*секция карточек*/}
         <div className={classes.section__card}>
@@ -62,7 +62,7 @@ export default function Main() {
              <circle cx="12" cy="8" r="6" />
             </svg>
             <h3>500+</h3>
-            <p>500+ проектов</p>
+            <p>{t("500+")}</p>
         </div>
         <div className={`${classes.card__satisfied__client} ${classes.card}`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
@@ -74,7 +74,7 @@ export default function Main() {
                 <circle cx="9" cy="7" r="4" />
             </svg>
               <h3>98%</h3>
-            <p>Довольных клиентов</p>
+            <p>{t("98% happy")}</p>
         </div>
         <div className={`${classes.card__experience} ${classes.card}`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
@@ -86,7 +86,7 @@ export default function Main() {
                 <circle cx="4" cy="20" r="2" />
             </svg>
               <h3>10+</h3>
-            <p>Лет опыта</p>
+            <p>{t("years experience")}</p>
         </div>
         <div className={`${classes.card__guarantee} ${classes.card}`}>
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none"
@@ -95,14 +95,14 @@ export default function Main() {
                  <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
             </svg>
               <h3>5y</h3>
-            <p>Гарантия</p>
+            <p>{t("warranty")}</p>
         </div>
         </div>
       </section>
       {/*BLOCK-2*/}
       <section className={classes.container__two}>
             <h1>
-                Почему выбирают нас ? 
+                {t("why choose us")} 
             </h1>
             <div className={classes.section__card__two}>
                        <div className={`${classes.card__premium} ${classes.card__two}`}>
@@ -114,8 +114,8 @@ export default function Main() {
                                <circle cx="12" cy="8" r="6" />
                               </svg>
                           </div>
-                          <h5>Премиум качество</h5>
-                          <p>Мы используем только первоклассные материалы и оборудование ведущих производителей</p>
+                          <h5>{t("premium quality")}</h5>
+                          <p>{t("we use only")}</p>
                        </div>
                        <div className={`${classes.card__fast__service} ${classes.card__two}`}>
                           <div className={classes.bg_container_svg}>
@@ -127,8 +127,8 @@ export default function Main() {
                                 </svg>
 
                           </div>
-                          <h5>Быстрый сервис</h5>
-                          <p>Оперативное реагирование и эффективное завершение проектов</p>
+                          <h5>{t("fast service")}</h5>
+                          <p>{t("quick response")}</p>
                        </div>
                        <div className={`${classes.card__extended__warranty} ${classes.card__two}`}>
                           <div className={classes.bg_container_svg}>
@@ -138,8 +138,8 @@ export default function Main() {
                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
                               </svg>
                           </div>
-                          <h5>Расширенная гарантия</h5>
-                          <p>Комплексное гарантийное покрытие на все наши установки</p>
+                          <h5>{t("extended warranty")}</h5>
+                          <p>{t("comprehensive warranty")}</p>
                        </div>
                        <div className={`${classes.card__team__experts} ${classes.card__two}`}>
                           <div className={classes.bg_container_svg}>
@@ -149,8 +149,8 @@ export default function Main() {
                                 <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
                               </svg>
                           </div>
-                          <h5>Команда экспертов</h5>
-                          <p> сертифицированный специалисты с обширным опытом работы в Дубае</p>
+                          <h5>{t("expert team")}</h5>
+                          <p>{t("certified professionals")}</p>
                        </div>
             </div>
       </section>
@@ -159,9 +159,9 @@ export default function Main() {
            <div className={classes.block__img__work}>
             <div className={classes.block__zagolovok}>
              <h1>
-                Наши работы 
+                {t("our works")}
              </h1>
-             <p>Портфолио завершенных проектов по всему Дубаю</p>
+             <p>{t("explore our")}</p>
             </div>
             <div className={classes.blocks__img__my__work}>
                 <div className={classes.contain__img}>
@@ -190,9 +190,9 @@ export default function Main() {
         <div className={classes.block__reviews}>
          <div className={classes.block__zagolovok}>
              <h1>
-                Отзывы наших клиентов
+                {t("what our clients say")}
              </h1>
-             <p>Реальные отзывы довольных клиентов</p>
+             <p>{t("real feedback")}</p>
             </div>
             <div className={classes.block__nav__and__reviews__swiper}>
              <Swiper
@@ -214,7 +214,8 @@ export default function Main() {
              className="flex"
              >
               {reviews.map((review: Reviews, index)=>{
-                const [firstName = "", lastName = ""] = review.author.split(" ");
+                const lang = (i18n.language.split("-")[0] as Lang)
+                const [firstName = "", lastName = ""] = review.author[lang].split(" ");
                 const firstNameLat = firstName.charAt(0).toUpperCase();
                 const lastNameLat = lastName.charAt(0).toUpperCase();
                 return (
@@ -224,13 +225,13 @@ export default function Main() {
                         <Star key={i} stroke="#3f485a" fill="#3f485a"/>
                     ))}</div>
                     <div className={classes.block__text__swiper}>
-                    <p className={classes.swiper__text}>"{review.text}"</p>
+                    <p className={classes.swiper__text}>"{review.text[lang]}"</p>
                     <div className={classes.block__name__author__swiper}>
                         <div className={classes.swiper__initials}>
                         <p>{firstNameLat}</p>
                         <p>{lastNameLat}</p>
                         </div>
-                        <p className={classes.swiper__full__name__author}>{review.author}</p>
+                        <p className={classes.swiper__full__name__author}>{review.author[lang]}</p>
                     </div>
                     </div>
                  </div>
@@ -249,11 +250,11 @@ export default function Main() {
 {/*BLOCK-5  навигация для перехода на страницы */}
       <section className={classes.container__five}>
           <div className={classes.block__navigation__pages}>
-                  <h1>Получить консультацию</h1>
-                  <p>Свяжитесь с нами сегодня для бесплатной консультации и расчёта. Давайте сделаем ваше пространство идеальным.</p>
+                  <h1>{t("get consultation")}</h1>
+                  <p>{t("contact us today")}</p>
                   <div className={classes.block__btn__navigation}>
-                     <Link href="/conditioners" className={`${classes.btn__page__conditioner} ${classes.btn__pages}`}><span>Услуги кондиционирования</span></Link>
-                     <Link href="/repair" className={`${classes.btn__page__repair} ${classes.btn__pages}`}><span>Ремонтые услуги</span></Link>
+                     <Link href="/conditioners" className={`${classes.btn__page__conditioner} ${classes.btn__pages}`}><span>{t("ac services")}</span></Link>
+                     <Link href="/repair" className={`${classes.btn__page__repair} ${classes.btn__pages}`}><span>{t("renovation services")}</span></Link>
                   </div>
 
           </div>
