@@ -1,12 +1,11 @@
 .header {
-  color: white;
-  flex-shrink: 0;
-  position: fixed;
-      top: 0;
+    flex-shrink: 0;
+    position: fixed;
+    top: 0;
     left: 0;
     right: 0;
     z-index: 99;
-  background: #707a8f;
+    background: linear-gradient(.25turn, #3f485a, #707a8f)
 }
 
 
@@ -15,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+
     padding-inline: 15px;
     padding-block: 10px;
 }
@@ -61,7 +60,7 @@
 
 .page__navigation a {
     text-decoration: none;
-    color: #1f242e;
+    color: #ffffff;
 }
 
 .btn__ask {
@@ -69,7 +68,6 @@
     font-weight: 600;
     color: white;
     background: linear-gradient(0.25turn, #1f242e, #3f485a);
-    ;
     border: none;
     border-radius: 5px;
     cursor: pointer;

@@ -82,8 +82,12 @@
     font-size: 15px;
     padding: 8px;
 }
-
-
+.text__mail {
+    font-size: 13px;
+}
+.text__mail svg{
+    flex-shrink: 0;
+}
 
 @media(min-width:770px) {
     .container__footer {
@@ -93,8 +97,15 @@
         font-size: 22px;
     }
     .text{
-        font-size: 20px;
+        font-size: 17px;
     }
+    .text__mail{
+        font-size: 13px;
+    }
+}
+
+.hr{
+    margin-inline: 4rem ;
 }
 
 @media(min-width:1020px) {

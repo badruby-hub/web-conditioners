@@ -4,15 +4,20 @@ import { Calculator, PhoneCall, Settings, Shield, Thermometer, Wind, Zap } from 
 import classes from "./conditioners.module.css";
 import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
+import { PopUp, PopUpСalculation } from "@/components/Dialog/Popup/PopUp";
+import { useState } from "react";
 
 const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
 
 export default function Main() {
    const {t} = useTranslation();
+   const [isOpen, setIsOpen] = useState <boolean> (false);
+   const [isOpenCalc, setIsOpenCalc] = useState <boolean> (false);
+
     return <>
         <section className={`${classes.video_bg}`}>
         <ReactPlayer 
-         src="/video/conditioners/conditioners.mp4"
+         src="/video/conditioners/conditioners-2.mp4"
          playing
          muted
          loop
@@ -24,11 +29,13 @@ export default function Main() {
         <div className={classes.video_bg_content}>
             <h1>{t("ducted ac")}</h1>
             <p>{t("professional climate")}</p>
-            <button className={classes.btn__ask}><span><PhoneCall size={17}/>{t("request a technician")}</span></button>
+            <button onClick={()=> setIsOpen(true)} className={classes.btn__ask}><span><PhoneCall size={17}/>{t("request a technician")}</span></button>
         </div>
       </section>
       {/* BLOCK-2 */}
       <section className={classes.container__one}>
+         <PopUp open={isOpen} onClose={()=> setIsOpen(false)}/>
+         <PopUpСalculation openCalc={isOpenCalc} onCloseCalc={()=> setIsOpenCalc(false)}/>   
         <div className={classes.block__zagolovok}>
             <h1>
                 {t("our ac services")} 
@@ -122,7 +129,7 @@ export default function Main() {
                     <li><Shield/>{t("30-day")}</li>
                    </ul>
                    <footer className={classes.footer}>
-                      <button className={classes.price__btn}>
+                      <button onClick={()=> setIsOpenCalc(true)} className={classes.price__btn}>
                                  <Calculator size={20}/><span>{t("get quote")}</span>
                       </button>
                    </footer>
@@ -141,7 +148,7 @@ export default function Main() {
                     <li><Shield/>{t("priority support")}</li>
                    </ul>
                    <footer className={classes.footer}>
-                      <button className={classes.price__btn}>
+                      <button onClick={()=> setIsOpenCalc(true)} className={classes.price__btn}>
                                  <Calculator size={20}/><span>{t("get quote")}</span>
                       </button>
                    </footer>
@@ -160,7 +167,7 @@ export default function Main() {
                     <li><Shield/>{t("24/7 support")}</li>
                    </ul>
                    <footer className={classes.footer}>
-                      <button className={classes.price__btn}>
+                      <button onClick={()=> setIsOpenCalc(true)} className={classes.price__btn}>
                                  <Calculator size={20}/><span>{t("get quote")}</span>
                       </button>
                    </footer>

@@ -2,13 +2,15 @@ import { useEffect, useRef, useState } from "react";
 import classes from "./splite.module.css";
 import { SplitProps } from "./split.props";
 import { ArrowRightLeft } from "lucide-react";
+import { after } from "node:test";
+import { useTranslation } from "react-i18next";
 
 export default function Split({ leftImg, rightImg }: SplitProps) {
   const [isDown, setIsDown] = useState<Boolean>(false);
   const [lineX, setLineX] = useState<number>(0);
   const [widthLeft, setWidthLeft] = useState<number>(0);
   const ref = useRef<HTMLDivElement>(null);
-
+  const {t} = useTranslation();
   useEffect(() => {
     const handleMove = (e: MouseEvent | TouchEvent) => {
       setLineX((x) => computeState(x, e));
@@ -63,13 +65,16 @@ export default function Split({ leftImg, rightImg }: SplitProps) {
       ref={ref}
       style={{ backgroundImage: `url(${rightImg})` }}
     >
+     
       <div
         className={classes.left}
         style={{
           backgroundImage: `url(${leftImg})`,
           clipPath: `polygon(0% 0%, ${widthLeft}px 0%, ${widthLeft}px 100%, 0% 100%)`,
         }}
-      ></div>
+      >
+         <div className={classes.before}>{t("before")}</div>
+      </div>
       <div
         style={{ left: lineX }}
         className={classes.line}
@@ -78,6 +83,7 @@ export default function Split({ leftImg, rightImg }: SplitProps) {
               <ArrowRightLeft className={classes.ArrowRightLeft} size={20}/>
             </div>
         </div>
+        <div className={classes.after}>{t("after")}</div>
     </div>
   );
 }

@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "left": "/portfolio/split/one.jpeg",
-    "right": "/portfolio/split/two.jpeg"
+    "left": "/portfolio/split/one.jpg",
+    "right": "/portfolio/split/two.jpg"
   },
   {
     "id": 2,
-    "left": "/portfolio/split/three.jpeg",
-    "right": "/portfolio/split/four.jpeg"
+    "left": "/portfolio/split/three.jpg",
+    "right": "/portfolio/split/four.jpg"
   },
   {
     "id": 3,
-    "left": "/portfolio/split/five.jpeg",
-    "right": "/portfolio/split/six.jpeg"
+    "left": "/portfolio/split/five.jpg",
+    "right": "/portfolio/split/six.jpg"
   }
 ]

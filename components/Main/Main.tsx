@@ -12,7 +12,9 @@ import { Star } from "lucide-react";
 import Link from "next/link";
 import { Reviews } from "./main.props";
 import { useTranslation } from "react-i18next";
-import i18n from "@/app/i18n";
+import { useState } from "react";
+
+import { PopUp } from "../Dialog/Popup/PopUp";
 
 type Lang = "ru" | "en";
 
@@ -23,12 +25,12 @@ const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
 
 export default function Main() {
     const {t, i18n} = useTranslation();
-
+    const [isOpen, setIsOpen] = useState <boolean> (false);
     return <>
        {/*video bg*/}
       <section className={`${classes.video_bg}`}>
         <ReactPlayer
-             src="/video/video-bg-fon-6.mp4"
+             src="/video/video-bg-fon-2.mp4"
              playing
              muted
              loop
@@ -40,11 +42,12 @@ export default function Main() {
         <div className={classes.video_bg_content}>
             <h1>moduhaus</h1>
             <p>{t("modern")}</p>
-            <button className={classes.btn__ask}><span>{t("get consultation")}</span></button>
+            <button onClick={()=> setIsOpen(true)} className={classes.btn__ask}><span>{t("get consultation")}</span></button>
         </div>
       </section>
            {/*BLOCK-1*/}
       <section className={classes.container__one}>
+       <PopUp open={isOpen} onClose={()=> setIsOpen(false)}/>
         <h1>{t("about")}<span>Moduhaus</span></h1>
         <p className={classes.block__p__one}>
           {t("we are")}
@@ -165,22 +168,22 @@ export default function Main() {
             </div>
             <div className={classes.blocks__img__my__work}>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/holl.jpeg" alt="холл" />
+                    <img src="/portfolio/image-1.jpg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/conditioner.jpeg" alt="холл" />
+                    <img src="/portfolio/conditioner.jpg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/work.jpeg" alt="холл" />
+                    <img src="/portfolio/image-2.jpg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/room.jpeg" alt="холл" />
+                    <img src="/portfolio/bathroom.jpg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/holl-two.jpeg" alt="холл" />
+                    <img src="/portfolio/bathroom-2.jpg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/work-two.jpeg" alt="холл" />
+                    <img src="/portfolio/image-3.jpg" alt="холл" />
                 </div>
             </div>
            </div>

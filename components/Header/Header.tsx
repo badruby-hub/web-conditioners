@@ -6,13 +6,14 @@ import {useState } from "react";
 import { Globe, PhoneCall } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { toggleBtn } from "../utils/Button/toggleLanguage";
+import { PopOver } from "../Dialog/Popover/Popover";
 
 
 
 
 export default function NavHeader() {
   // const [isScrolled, setIsScrolled] = useState(false);
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState <boolean>(false);
   // useEffect(()=>{
 
   //   const handleScroll =() =>{
@@ -55,13 +56,13 @@ export default function NavHeader() {
             {active ? <RxCross1 /> : <RxHamburgerMenu />}
           </li>
           <ul className={`${active ? classes.container__navbar__active : classes.container__navbar}`}>
-            <li><Link href="/">{t("home")}</Link></li>
-            <li><Link href="conditioners">{t("conditioners")}</Link></li>
-            <li><Link href="repair">{t("repair")}</Link></li>
+            <li><Link onClick={()=> setActive(false)} href="/">{t("home")}</Link></li>
+            <li><Link onClick={()=> setActive(false)} href="conditioners">{t("conditioners")}</Link></li>
+            <li><Link onClick={()=> setActive(false)} href="repair">{t("repair")}</Link></li>
             <li>
               <div className={classes.block__btn__navbar}>
                    <button onClick={toggleBtn} className={classes.language__change}><Globe size={20}/>{t("translate")}</button>
-                   <button className={classes.btn__ask}><span><PhoneCall size={17}/>{t("contact")}</span></button>
+                   <PopOver/>
              </div>
       </li>
           </ul>
@@ -80,7 +81,7 @@ export default function NavHeader() {
         </ul>
       <div className={classes.block__btn__learn__and__ask}>
          <button onClick={toggleBtn} className={classes.language__change}><Globe size={20}/>{t("translate")}</button>
-         <button className={classes.btn__ask}><span><PhoneCall size={17}/>{t("contact")}</span></button>
+          <PopOver/>
       </div>
       </nav>
     </header>

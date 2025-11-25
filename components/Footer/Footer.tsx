@@ -27,21 +27,7 @@ export default function Footer() {
           <li className={`${classes.text} ${classes.text__repair}`}><Link href="repair">{t("repair")}</Link></li>
         </ul>
      </section>
-     <section className={classes.contacts}>
-        <h2 className={classes.h__two}>{t("contact information")}</h2>
-        <ul>
-          <li className={`${classes.text} ${classes.text__maps}`}>
-           <MapPin className={classes.icon}/><Link href="https://maps.app.goo.gl/mQw4XV5hLBMGoVJB7" target="_blank" rel="noopener noreferrer">{t("geo")}</Link>
-          </li>
-          <li  className={`${classes.text} ${classes.text__number}`}>
-          <Phone className={classes.icon}/><Link href="tel:+79962042046">+7&#40;996&#41;204-20-46</Link>
-          </li>
-          <li className={`${classes.text} ${classes.text__mail}`}>
-           <Mail className={classes.icon}/><Link href="mailto:info@moduhaus.ae">info@moduhaus.ae</Link>
-          </li>
-        </ul>
-     </section>
-          <section className={classes.media}>
+     <section className={classes.media}>
         <h2 className={classes.h__two}>{t("follow")}</h2>
         <ul>
           <li className={`${classes.text} ${classes.text__facebook} ${classes.block__media}`}>
@@ -55,8 +41,22 @@ export default function Footer() {
           </li>
         </ul>
      </section>
+     <section className={classes.contacts}>
+        <h2 className={classes.h__two}>{t("contact information")}</h2>
+        <ul>
+          <li className={`${classes.text} ${classes.text__maps}`}>
+           <MapPin className={classes.icon}/><Link href="https://maps.app.goo.gl/mQw4XV5hLBMGoVJB7" target="_blank" rel="noopener noreferrer">{t("geo")}</Link>
+          </li>
+          <li  className={`${classes.text} ${classes.text__number}`}>
+          <Phone className={classes.icon}/><Link href="tel:+971588122046">+&#40;971&#41;58-812-2046</Link>
+          </li>
+          <li className={`${classes.text} ${classes.text__mail}`}>
+           <Mail className={classes.icon}/><Link href="mailto:moduhaus.technical@gmail.com">moduhaus.technical@gmail.com</Link>
+          </li>
+        </ul>
+     </section>
     </section>
-     <hr />
+     <hr className={classes.hr} />
      <p className={classes.rights}>© 2025 MODUHAUS.{t("rights reserved")}</p>
     </>
 }

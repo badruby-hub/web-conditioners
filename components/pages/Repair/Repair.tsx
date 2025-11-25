@@ -17,7 +17,8 @@ import successStoryData from "@/components/data/SuccessStory.json";
 import Form from "@/components/form/Form";
 import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
-import i18n from "@/app/i18n";
+import { useState } from "react";
+import { PopUp } from "@/components/Dialog/Popup/PopUp";
 
 const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
 
@@ -27,11 +28,13 @@ const history:History[]= successStoryData;
 const slide:Comparison[]= comparisonData;
 
 export default function Repair() {
-   const {t} = useTranslation();
+   const {t, i18n} = useTranslation();
+   const [isOpen, setIsOpen] = useState <boolean> (false);
+
     return <>
             <section className={`${classes.video_bg}`}>
         <ReactPlayer 
-             src="/video/repair/fon-repair.mp4"
+             src="/video/repair/fon-repair-2.mp4"
              playing
              muted
              loop
@@ -43,11 +46,12 @@ export default function Repair() {
         <div className={classes.video_bg_content}>
             <h1>{t("apartment renovation")}</h1>
             <p>{t("transform your")}</p>
-            <button className={classes.btn__ask}><span>{t("get estimate")}<RulerDimensionLine size={17}/></span></button>
+            <button onClick={()=> setIsOpen(true)} className={classes.btn__ask}><span>{t("get estimate")}<RulerDimensionLine size={17}/></span></button>
         </div>
       </section>
       {/* BLOCK-1 */}
       <section className={classes.container__one}>
+         <PopUp open={isOpen} onClose={()=> setIsOpen(false)}/>
         <div className={classes.block__zagolovok}>
             <h1>
                {t("our renovation")}
@@ -213,7 +217,7 @@ export default function Repair() {
              </h1>
              <p>{t("get a detailed")}</p>
             </div>
-            <button className={classes.btn__smeta}><span><RulerDimensionLine size={17}/>{t("get estimate")}</span></button>
+            <button onClick={()=> setIsOpen(true)} className={classes.btn__smeta}><span><RulerDimensionLine size={17}/>{t("get estimate")}</span></button>
          </div>
       </section>
     </>

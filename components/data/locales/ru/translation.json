@@ -103,7 +103,15 @@
   "ready to transform":"Готовы преобразить ваше пространство?",
   "get a detailed":"Получите детальную смету для вашего ремонтного проекта",
   "firstName":"Ваше имя",
+  "enterFirstName":"Введите ваше имя",
   "numberPhone":"Введите номер телефона",
   "details":"Введите детали проекта",
-  "submit request":"Отправить запрос"
+  "submit request":"Отправить запрос",
+  "before": "До",
+  "after": "После",
+  "select service":"Выберите услугу",
+  "leave request":"Оставить заявку",
+  "description":"Описание",
+  "describe the task":"Опишите задачу подробно",
+  "send":"Отправить"
 }

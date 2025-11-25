@@ -1,0 +1,129 @@
+.btn__ask {
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(0.25turn, #1f242e, #3f485a);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn__ask span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn__ask:hover {
+    opacity: .9;
+}
+
+
+
+.panel {
+    background-color: #707a8f;
+    position: absolute;
+    top: 277px;
+    right: 20px;
+    border-radius: 6px;
+    padding: 10px;
+    color: #fff;
+    pointer-events: auto;
+}
+
+.panel_ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+}
+
+.phone_number {
+    grid-column: span 2 / span 2;
+}
+
+.link_telegram,
+.link_whatsApp {
+    grid-row-start: 2;
+    text-align: center;
+}
+
+.link a {
+    color: white;
+    text-decoration: none;
+}
+
+
+.block_media_icon {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+
+
+.block_whatsApp {
+    background: #fff;
+}
+
+.block_telegram {
+    background: #0a70bf;
+
+}
+
+
+.telegram {
+    position: absolute;
+    top: 9px;
+    right: 10px;
+}
+
+.whatsApp {
+    position: absolute;
+    top: 6px;
+    right: 7px;
+}
+
+
+/* Переходы для headlessui Transition */
+.transitionEnter {
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.transitionEnterFrom {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+.transitionEnterTo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.transitionLeave {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.transitionLeaveFrom {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.transitionLeaveTo {
+    opacity: 0;
+    transform: translateY(8px);
+}
+
+
+
+
+
+@media(min-width:768px) {
+    .panel {
+        top: 90px;
+        right: 20px;
+    }
+}

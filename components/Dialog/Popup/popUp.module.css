@@ -1,0 +1,113 @@
+.bg__dialog {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 99;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+
+.popUp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 15px;
+    margin-inline: 20px;
+    color: #3f485a;
+    position: relative;
+}
+
+.title {
+    font-size: 25px;
+
+    text-align: center;
+}
+
+
+.fieldset {
+    border: none;
+}
+
+
+.field__number,
+.field__firstName {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+
+.field__number input,
+.field__firstName input {
+    width: 240px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #e9eaec;
+    font-size: 150%;
+}
+
+.field label {
+    display: block;
+    color: #707a8f;
+    font-size: 15px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.field__number input:focus-visible,
+.field__firstName input:focus-visible,
+.field__description textarea:focus-visible,
+.field__service select:focus-visible {
+    outline: 1px solid #3f485a;
+}
+
+
+.block__select select {
+    background: #e9eaec;
+    width: 100%;
+    font-size: 20px;
+    border-radius: 10px;
+    padding: 5px;
+    border: none;
+}
+
+
+.field__description textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background: #e9eaec;
+    resize: none;
+}
+
+
+.close__btn {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    background: none;
+    border: none;
+}
+
+
+.submit__btn {
+    margin: 25px 0 0 0;
+    border: none;
+    background: #707a8f;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 15px;
+    color: white;
+}
