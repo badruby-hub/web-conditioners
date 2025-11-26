@@ -40,7 +40,7 @@ export default function Repair() {
              loop
              preload="auto"
             >
-               <source src="/video/repair/fon-repair-2.mp4" type="video/mp4" />
+               <source src="https://web-conditioners.vercel.app/video/repair/fon-repair-2.mp4" type="video/mp4" />
             </video>
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>

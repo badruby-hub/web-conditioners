@@ -22,7 +22,7 @@ export default function Main() {
          loop
          preload="auto"
          >
-            <source src="/video/conditioners/conditioners-2.mp4" type="video/mp4" />
+            <source src="https://web-conditioners.vercel.app/video/conditioners/conditioners-2.mp4" type="video/mp4" />
          </video>
 
         <div className={classes.shadow_bg}></div>

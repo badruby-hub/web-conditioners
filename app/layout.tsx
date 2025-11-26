@@ -33,11 +33,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-        <Head>
+        {/* <Head>
           <link rel="preload" as="video" href="/video/repair/fon-repair-2.mp4" type="video/mp4" />
           <link rel="preload" as="video" href="/video/conditioners/conditioners-2.mp4" type="video/mp4" />
           <link rel="preload" as="video" href="/video/video-bg-fon-2.mp4" type="video/mp4" />
-        </Head>
+        </Head> */}
       <body>
               <I18nProvider>
           <NavHeader/>
