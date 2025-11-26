@@ -2,12 +2,10 @@
 
 import { Calculator, PhoneCall, Settings, Shield, Thermometer, Wind, Zap } from "lucide-react";
 import classes from "./conditioners.module.css";
-// import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
 import { PopUp, PopUpСalculation } from "@/components/Dialog/Popup/PopUp";
 import { useState } from "react";
 
-// const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
 
 export default function Main() {
    const {t} = useTranslation();
@@ -16,23 +14,16 @@ export default function Main() {
 
     return <>
         <section className={`${classes.video_bg}`}>
-        {/* <ReactPlayer 
-         src="/video/conditioners/conditioners-2.mp4"
-         playing
-         muted
-         loop
-         playsInline
-         width="100%"
-         height="100%"
-        /> */}
         <video  
-         src="/video/conditioners/conditioners-2.mp4"
+         poster="/video/conditioners/conditioners-poster-fon-2.png"
          autoPlay
          muted
          playsInline
          loop
          preload="auto"
-         ></video>
+         >
+            <source src="/video/conditioners/conditioners-2.mp4" type="video/mp4" />
+         </video>
 
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>

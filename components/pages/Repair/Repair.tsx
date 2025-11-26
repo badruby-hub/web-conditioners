@@ -15,12 +15,10 @@ import { Comparison,History } from "./repair.props";
 
 import successStoryData from "@/components/data/SuccessStory.json";
 import Form from "@/components/form/Form";
-// import dynamic from "next/dynamic";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import { PopUp } from "@/components/Dialog/Popup/PopUp";
 
-// const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
 
 type Lang = "ru" | "en";
 
@@ -33,23 +31,17 @@ export default function Repair() {
 
     return <>
             <section className={`${classes.video_bg}`}>
-        {/* <ReactPlayer 
-             src="/video/repair/fon-repair-2.mp4"
-             playing
-             muted
-             loop
-             playsInline
-             width="100%"
-             height="100%"
-             /> */}
+
              <video 
-             src="/video/repair/fon-repair-2.mp4"
+             poster="/video/repair/poster-fon-repair-2.png"
              autoPlay
              muted
              playsInline
              loop
              preload="auto"
-            ></video>
+            >
+               <source src="/video/repair/fon-repair-2.mp4" type="video/mp4" />
+            </video>
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
             <h1>{t("apartment renovation")}</h1>
