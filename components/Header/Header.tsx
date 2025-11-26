@@ -2,7 +2,7 @@
 import Link from "next/link";
 import classes from "./header.module.css";
 import { RxCross1, RxHamburgerMenu } from "react-icons/rx";
-import {useState } from "react";
+import {useEffect, useState } from "react";
 import { Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { toggleBtn } from "../utils/Button/toggleLanguage";
@@ -13,33 +13,37 @@ import { usePathname } from "next/navigation";
 
 
 export default function NavHeader() {
-  // const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState <boolean>(false);
   const [active, setActive] = useState <boolean>(false);
-  // useEffect(()=>{
 
-  //   const handleScroll =() =>{
-  //     let h = window.scrollY > 86.4;
-  //     if(h) {
-  //      setIsScrolled(true);
-  //     }else{
-  //       setIsScrolled(false)
-  //     }
-  //   }
-  //    handleScroll();
+
+  useEffect(()=>{
+
+      let prevScrollpos = window.pageYOffset;
+     const handleScroll = () =>{
+            let currentScrollpos = window.pageYOffset;
+      if(prevScrollpos < currentScrollpos){
+         setIsScrolled(true);
+      }else{
+        setIsScrolled(false)
+      }
+      prevScrollpos = currentScrollpos;
+     }
+
+     window.addEventListener("scroll", handleScroll);
      
-  //    window.addEventListener("scroll", handleScroll);
+
+     return () => window.removeEventListener("scroll",handleScroll);
+    
      
 
-  //    return () => window.removeEventListener("scroll", handleScroll);
-
-
-  // },[]);
+  },[]);
 
   const {t} = useTranslation();
   const pathname = usePathname();
 
   return (
-    <header   className={`${classes.header}`}>
+    <header className={`${isScrolled ? classes.hide : ""} ${classes.header}`}>
       <nav  className={`${classes.nav}`}>
         <Link href="/">
           <div className={classes.block__img}>

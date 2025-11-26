@@ -4,10 +4,15 @@
     top: 0;
     left: 0;
     right: 0;
+    /* width: 100%; */
     z-index: 99;
-    background: linear-gradient(.25turn, #3f485a, #707a8f)
+    background: linear-gradient(.25turn, #3f485a, #707a8f);
+    transition: .5s;
 }
 
+.hide { 
+    transform: translateY(-100%);
+}
 
 .nav {
 
