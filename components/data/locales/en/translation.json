@@ -103,7 +103,7 @@
   "ready to transform": "Ready to Transform?",
   "get a detailed": "Get a detailed cost estimate for your renovation project",
   "firstName": "Your name",
-  "enterFirstName":"Enter your name",
+  "enterFirstName": "Enter your name",
   "numberPhone": "Phone number",
   "details": "Project details",
   "submit request": "Submit request",
@@ -111,7 +111,8 @@
   "after": "After",
   "select service": "Select service",
   "leave request": "Leave request",
-  "description":"Description",
-   "describe the task":"Describe the task",
-     "send":"Send"
+  "description": "Description",
+  "describe the task": "Describe the task",
+  "send": "Send",
+  "choose your plan": "Choose your plan"
 }

@@ -33,8 +33,11 @@
 }
 
 
-.fieldset {
-    border: none;
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 
@@ -75,6 +78,7 @@
 .block__select select {
     background: #e9eaec;
     width: 100%;
+    min-width: 235px;
     font-size: 20px;
     border-radius: 10px;
     padding: 5px;
@@ -84,6 +88,7 @@
 
 .field__description textarea {
     width: 100%;
+    min-width: 235px;
     border: none;
     outline: none;
     border-radius: 5px;
@@ -99,6 +104,7 @@
     top: 15px;
     background: none;
     border: none;
+    cursor: pointer;
 }
 
 
