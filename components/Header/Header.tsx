@@ -20,7 +20,7 @@ export default function NavHeader() {
   useEffect(()=>{
 
       let prevScrollpos = window.pageYOffset;
-      const threshold = 10;
+      const threshold = 20;
 
      const handleScroll = () =>{
             let currentScrollpos = window.pageYOffset;
