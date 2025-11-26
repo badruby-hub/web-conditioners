@@ -96,7 +96,7 @@ export default function Repair() {
              <h1>
                 {t("our portfolio")}
              </h1>
-             <p>{t("See the transformation we create")}</p>
+             <p>{t("see the transformation we create")}</p>
             </div>
             <div className={classes.block__nav__and__reviews__swiper}>
              <Swiper
