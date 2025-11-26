@@ -9,10 +9,11 @@
 
 .name_and_number {
     display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
-.name_and_number input {}
+
 
 .details {
     resize: none;
@@ -50,4 +51,11 @@
 
 .btn__ask:hover {
     opacity: .9;
+}
+
+
+@media(min-width:520px){
+    .name_and_number{
+        flex-direction:row;
+    }
 }
