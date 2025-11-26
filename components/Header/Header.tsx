@@ -24,10 +24,10 @@ export default function NavHeader() {
 
      const handleScroll = () =>{
             let currentScrollpos = window.pageYOffset;
-            const diff = prevScrollpos - currentScrollpos;
+            const diff = currentScrollpos - prevScrollpos;
       if(diff > threshold){
          setIsScrolled(true);
-      }else if (diff > - threshold){
+      }else if (diff < - threshold){
         setIsScrolled(false)
       }
       prevScrollpos = currentScrollpos;
