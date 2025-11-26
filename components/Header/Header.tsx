@@ -20,17 +20,20 @@ export default function NavHeader() {
   useEffect(()=>{
 
       let prevScrollpos = window.pageYOffset;
+      const threshold = 10;
+
      const handleScroll = () =>{
             let currentScrollpos = window.pageYOffset;
-      if(prevScrollpos < currentScrollpos){
+            const diff = prevScrollpos - currentScrollpos;
+      if(diff > threshold){
          setIsScrolled(true);
-      }else{
+      }else if (diff > - threshold){
         setIsScrolled(false)
       }
       prevScrollpos = currentScrollpos;
      }
 
-     window.addEventListener("scroll", handleScroll);
+     window.addEventListener("scroll", handleScroll, {passive: true});
      
 
      return () => window.removeEventListener("scroll",handleScroll);
