@@ -43,7 +43,7 @@ export default function NavHeader() {
       <nav  className={`${classes.nav}`}>
         <Link href="/">
           <div className={classes.block__img}>
-            <img src="/logo/black/home-256.png" alt="Логотип" />
+            <img src="/logo/home-256.png" alt="Логотип" />
           </div>
         </Link>
         {/* бургер меню */}

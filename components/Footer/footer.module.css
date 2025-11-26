@@ -7,6 +7,9 @@
 }
 
 .one__block__footer {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
     margin-bottom: 35px;
     font-size: 13px;
     color: #707a8f;
@@ -14,7 +17,7 @@
 
 
 .block__img {
-    width: 45px;
+    width: 70px;
     height: 45px;
     margin-bottom: 10px;
 }

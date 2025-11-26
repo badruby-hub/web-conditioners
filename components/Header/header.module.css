@@ -29,7 +29,7 @@
 
 
 .block__img {
-    width: 60px;
+    width: 70px;
 }
 
 .icons__burger__menu {
@@ -128,7 +128,7 @@
 
 
     position: absolute;
-    top: 86px;
+    top: 95px;
     left: 0;
     overflow: hidden;
 

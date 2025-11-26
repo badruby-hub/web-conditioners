@@ -14,7 +14,7 @@ export default function Footer() {
       <section className={classes.one__block__footer}>
       <Link href="/">
       <div className={classes.block__img}>
-        <img src="/logo/black/home-256.png" alt="Логотип" />
+        <img src="/logo/home-black-256.png" alt="Логотип" />
       </div>
       </Link>
       <p className={`${classes.text} ${classes.text__one__block}`}>{t("modern solutions")}</p>
