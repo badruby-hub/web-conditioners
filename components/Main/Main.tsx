@@ -5,7 +5,7 @@ import classes from "./main.module.css";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import dynamic from "next/dynamic";
+
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 import { Star } from "lucide-react";
@@ -20,7 +20,7 @@ type Lang = "ru" | "en";
 
 const reviews: Reviews[] = reviewsData; 
 
-const ReactPlayer = dynamic(()=> import("react-player"), {ssr: false});
+
 
 
 export default function Main() {
@@ -29,15 +29,14 @@ export default function Main() {
     return <>
        {/*video bg*/}
       <section className={`${classes.video_bg}`}>
-        <ReactPlayer
-             src="/video/video-bg-fon-2.mp4"
-             playing
-             muted
-             loop
-             playsInline
-             width="100%"
-             height="100%"
-             />
+             <video 
+               src="/video/video-bg-fon-2.mp4"
+               autoPlay
+               muted
+               playsInline
+               loop
+               preload="auto"
+               ></video>
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
             <h1>moduhaus</h1>
