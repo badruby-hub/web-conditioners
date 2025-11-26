@@ -172,19 +172,19 @@ export default function Main() {
                     <img src="/portfolio/image-1.jpg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/conditioner.jpg" alt="холл" />
+                    <img src="/portfolio/image-2.jpeg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/image-2.jpg" alt="холл" />
+                    <img src="/portfolio/image-3.jpeg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/bathroom.jpg" alt="холл" />
+                    <img src="/portfolio/image-4.jpeg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/bathroom-2.jpg" alt="холл" />
+                    <img src="/portfolio/image-5.jpg" alt="холл" />
                 </div>
                 <div className={classes.contain__img}>
-                    <img src="/portfolio/image-3.jpg" alt="холл" />
+                    <img src="/portfolio/image-6.jpg" alt="холл" />
                 </div>
             </div>
            </div>
