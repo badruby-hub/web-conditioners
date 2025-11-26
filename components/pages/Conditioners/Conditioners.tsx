@@ -15,7 +15,7 @@ export default function Main() {
     return <>
         <section className={`${classes.video_bg}`}>
         <video  
-         poster="/video/conditioners/conditioners-poster-fon-2.png"
+         poster="https://web-conditioners.vercel.app/video/conditioners/conditioners-poster-fon-2.png"
          autoPlay
          muted
          playsInline

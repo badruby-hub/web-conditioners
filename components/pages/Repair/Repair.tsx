@@ -33,7 +33,7 @@ export default function Repair() {
             <section className={`${classes.video_bg}`}>
 
              <video 
-             poster="/video/repair/poster-fon-repair-2.png"
+             poster="https://web-conditioners.vercel.app/video/repair/poster-fon-repair-2.png"
              autoPlay
              muted
              playsInline
