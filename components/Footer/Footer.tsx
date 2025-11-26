@@ -48,7 +48,7 @@ export default function Footer() {
            <MapPin className={classes.icon}/><Link href="https://maps.app.goo.gl/mQw4XV5hLBMGoVJB7" target="_blank" rel="noopener noreferrer">{t("geo")}</Link>
           </li>
           <li  className={`${classes.text} ${classes.text__number}`}>
-          <Phone className={classes.icon}/><Link href="tel:+971588122046">+&#40;971&#41;58-812-2046</Link>
+          <Phone className={classes.icon}/><Link href="tel:+971588122046">+&#40;971&#41;58-812-5032</Link>
           </li>
           <li className={`${classes.text} ${classes.text__mail}`}>
            <Mail className={classes.icon}/><Link href="mailto:moduhaus.technical@gmail.com">moduhaus.technical@gmail.com</Link>
