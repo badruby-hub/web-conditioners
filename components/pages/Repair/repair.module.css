@@ -5,6 +5,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    background-image: url("https://web-conditioners.vercel.app/video/repair/poster-fon-repair-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .video_bg video {
@@ -82,12 +86,12 @@
     margin-bottom: 50px;
 }
 
-.block__zagolovok h1 { 
+.block__zagolovok h1 {
     margin-bottom: 24px;
 }
 
 .block__zagolovok p {
-   color: #707a8f;
+    color: #707a8f;
 }
 
 .section__card__one {
@@ -234,7 +238,7 @@
     padding-inline: 15px;
 }
 
-.block__form p{
+.block__form p {
     padding-inline: 10px;
 }
 
@@ -286,32 +290,40 @@
 }
 
 
-@media(min-width:770px){
-    .video_bg_content h1{
+@media(min-width:770px) {
+    .video_bg_content h1 {
         font-size: 45px;
     }
-    .video_bg_content p { 
+
+    .video_bg_content p {
         font-size: 18px;
     }
-    .block__zagolovok h1{
+
+    .block__zagolovok h1 {
         font-size: 45px;
     }
-    .block__zagolovok p { 
+
+    .block__zagolovok p {
         font-size: 18px;
     }
-    .section__card__one { 
-    grid-template-columns: repeat(2, minmax(0,1fr));
+
+    .section__card__one {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .card__one h1{
+
+    .card__one h1 {
         font-size: 22px;
     }
-    .card__one p { 
+
+    .card__one p {
         font-size: 18px;
     }
-    .swiper__text{
+
+    .swiper__text {
         font-size: 18px;
     }
-    .swiper__full__name__author{
+
+    .swiper__full__name__author {
         font-size: 18px;
     }
 }

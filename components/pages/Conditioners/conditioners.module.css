@@ -5,6 +5,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    background-image: url("https://web-conditioners.vercel.app/video/conditioners/conditioners-poster-fon-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .video_bg video {
@@ -81,7 +85,7 @@
     margin-bottom: 50px;
 }
 
-.block__zagolovok p { 
+.block__zagolovok p {
     color: #707a8f;
 }
 
@@ -227,11 +231,11 @@
 }
 
 .header {
-    padding-inline: 12px ;
+    padding-inline: 12px;
     text-align: center;
 }
 
-.header h2{
+.header h2 {
     font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.5;
@@ -286,44 +290,59 @@
 
 
 
-@media(min-width:770px){
-    .video_bg_content h1,.block__zagolovok h1{
+@media(min-width:770px) {
+
+    .video_bg_content h1,
+    .block__zagolovok h1 {
         font-size: 45px;
     }
-        .video_bg_content p{
+
+    .video_bg_content p {
         font-size: 25px;
     }
-     .block__zagolovok p { 
-       font-size: 18px;
-     }
-     .section__card__one, .section__card__two{
-        grid-template-columns: repeat(2, minmax(0,1fr));
-     }
-     .card__one h5{
-        font-size: 25px;
-     }
-     .card__one p{
-        font-size: 20px;
-     }
-     .card h3{
-        font-size: 20px;
-     }
-     .card p {
+
+    .block__zagolovok p {
         font-size: 18px;
-     }
-     .container__three h1{
-        font-size: 45px;
-     }
-    .section__card{
-         grid-template-columns: repeat(3, minmax(0,1fr));
     }
-    .header h2{
+
+    .section__card__one,
+    .section__card__two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card__one h5 {
+        font-size: 25px;
+    }
+
+    .card__one p {
+        font-size: 20px;
+    }
+
+    .card h3 {
+        font-size: 20px;
+    }
+
+    .card p {
+        font-size: 18px;
+    }
+
+    .container__three h1 {
+        font-size: 45px;
+    }
+
+    .section__card {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .header h2 {
         font-size: 1.7rem;
     }
-    .header p{
+
+    .header p {
         font-size: 15px;
     }
-    .price__features li { 
+
+    .price__features li {
         font-size: 14px;
     }
 }

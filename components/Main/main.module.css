@@ -5,6 +5,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    background-image: url("https://web-conditioners.vercel.app/video/video-poster-bg-fon-2.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .video_bg video {
@@ -367,10 +371,12 @@
     .video_bg_content p {
         font-size: 24px;
     }
-    .swiper__text{
+
+    .swiper__text {
         font-size: 18px;
     }
-    .swiper__full__name__author{
+
+    .swiper__full__name__author {
         font-size: 18px;
     }
 }
@@ -384,35 +390,38 @@
     .section__card__two {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .blocks__img__my__work{
+
+    .blocks__img__my__work {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
-    .block__btn__navigation{
+    .block__btn__navigation {
         flex-direction: row;
     }
 }
 
 
 
-@media(min-width:800px){
-    .blocks__img__my__work{
+@media(min-width:800px) {
+    .blocks__img__my__work {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         padding-inline: 100px;
     }
-    .card p{
+
+    .card p {
         font-size: 20px;
     }
-    
+
 }
 
 
-@media(min-width:1000px){
-    .section__card__two{
-        grid-template-columns: repeat(4,minmax(0,1fr));
+@media(min-width:1000px) {
+    .section__card__two {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
         padding-inline: 100px;
     }
-    .blocks__img__my__work{
+
+    .blocks__img__my__work {
         padding-inline: 125px;
     }
 }
