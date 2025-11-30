@@ -37,7 +37,7 @@ export default function Footer() {
             <Link href="https://www.instagram.com/moduhaus.ae?igsh=MWk5YnIyejZ3am1iag%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><Instagram className={`${classes.instagram} ${classes.icon}`}/></Link>
           </li>
           <li className={`${classes.text} ${classes.text__telegram} ${classes.block__media}`}>
-          <Link href="https://t.me/+971588125032" target="_blank" rel="noopener noreferrer"><Send className={`${classes.telegram} ${classes.icon}`}/></Link>
+          <Link href="https://t.me/971588125032" target="_blank" rel="noopener noreferrer"><Send className={`${classes.telegram} ${classes.icon}`}/></Link>
           </li>
         </ul>
      </section>
