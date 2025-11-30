@@ -31,13 +31,13 @@ export default function Footer() {
         <h2 className={classes.h__two}>{t("follow")}</h2>
         <ul>
           <li className={`${classes.text} ${classes.text__facebook} ${classes.block__media}`}>
-         <Link href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><Facebook className={`${classes.facebook} ${classes.icon}`}/></Link>
+         <Link href="https://www.facebook.com/share/177cJ5TqaJ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><Facebook className={`${classes.facebook} ${classes.icon}`}/></Link>
           </li>
           <li className={`${classes.text} ${classes.text__instagram} ${classes.block__media}`}>
-            <Link href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><Instagram className={`${classes.instagram} ${classes.icon}`}/></Link>
+            <Link href="https://www.instagram.com/moduhaus.ae?igsh=MWk5YnIyejZ3am1iag%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><Instagram className={`${classes.instagram} ${classes.icon}`}/></Link>
           </li>
           <li className={`${classes.text} ${classes.text__telegram} ${classes.block__media}`}>
-          <Link href="https://telegram.org/" target="_blank" rel="noopener noreferrer"><Send className={`${classes.telegram} ${classes.icon}`}/></Link>
+          <Link href="https://t.me/+971588125032" target="_blank" rel="noopener noreferrer"><Send className={`${classes.telegram} ${classes.icon}`}/></Link>
           </li>
         </ul>
      </section>
