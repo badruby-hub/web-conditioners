@@ -31,7 +31,7 @@ export const PopOver = () =>{
             <ul  className={`${classes.panel_ul}`}>
                 <li className={`${classes.phone_number} ${classes.link}`}><Link href="tel:+971588125032">+&#40;971&#41;58-812-5032</Link></li>
                 <li className={`${classes.li_telegram} ${classes.link}`}><Link href="https://t.me/+971588125032" target="_blank" rel="noopener noreferrer"><div className={`${classes.block_telegram} ${classes.block_media_icon}`}><Send size={34} className={`${classes.telegram} ${classes.icon}`}/></div></Link></li>
-                <li className={`${classes.li_whatsApp} ${classes.link}`}><Link href="https://wa.me/+971588125032?text=Здравствуйте%2C%20хочу%20задать%20вопрос" target="_blank" rel="noopener noreferrer"><div className={`${classes.block_whatsApp} ${classes.block_media_icon}`}><FaWhatsapp color="green" size={34} className={`${classes.whatsApp} ${classes.icon}`} /></div></Link></li>
+                <li className={`${classes.li_whatsApp} ${classes.link}`}><Link href="https://wa.me/+971588125032" target="_blank" rel="noopener noreferrer"><div className={`${classes.block_whatsApp} ${classes.block_media_icon}`}><FaWhatsapp color="green" size={34} className={`${classes.whatsApp} ${classes.icon}`} /></div></Link></li>
             </ul>
         </PopoverPanel>
         </Transition>
