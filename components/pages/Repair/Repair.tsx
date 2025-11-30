@@ -33,14 +33,14 @@ export default function Repair() {
             <section className={`${classes.video_bg}`}>
 
              <video 
-             poster="https://web-conditioners.vercel.app/video/repair/poster-fon-repair-2.png"
+             poster="https://moduhaus.ae/video/repair/poster-fon-repair-2.png"
              autoPlay
              muted
              playsInline
              loop
              preload="auto"
             >
-               <source src="https://web-conditioners.vercel.app/video/repair/fon-repair-2.mp4" type="video/mp4" />
+               <source src="https://moduhaus.ae/video/repair/fon-repair-2.mp4" type="video/mp4" />
             </video>
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>

@@ -30,14 +30,14 @@ export default function Main() {
        {/*video bg*/}
       <section className={`${classes.video_bg}`}>
              <video 
-               poster="https://web-conditioners.vercel.app/video/video-poster-bg-fon-2.png"
+               poster="https://moduhaus.ae/video/video-poster-bg-fon-2.png"
                autoPlay
                muted
                playsInline
                loop
                preload="auto"
                >
-                <source src="https://web-conditioners.vercel.app/video/video-bg-fon-2.mp4" type="video/mp4" />
+                <source src="https://moduhaus.ae/video/video-bg-fon-2.mp4" type="video/mp4" />
                </video>
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>

@@ -15,14 +15,14 @@ export default function Main() {
     return <>
         <section className={`${classes.video_bg}`}>
         <video  
-         poster="https://web-conditioners.vercel.app/video/conditioners/conditioners-poster-fon-2.png"
+         poster="https://moduhaus.ae/video/conditioners/conditioners-poster-fon-2.png"
          autoPlay
          muted
          playsInline
          loop
          preload="auto"
          >
-            <source src="https://web-conditioners.vercel.app/video/conditioners/conditioners-2.mp4" type="video/mp4" />
+            <source src="https://moduhaus.ae/video/conditioners/conditioners-2.mp4" type="video/mp4" />
          </video>
 
         <div className={classes.shadow_bg}></div>
