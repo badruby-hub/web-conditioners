@@ -66,7 +66,7 @@ export default function NavHeader() {
           <ul className={`${active ? classes.container__navbar__active : classes.container__navbar}`}>
             <li><Link className={pathname === "/" ? classes.active : ""} onClick={()=> setActive(false)} href="/">{t("home")}</Link></li>
             <li><Link className={pathname === "/conditioners" ? classes.active : ""} onClick={()=> setActive(false)} href="conditioners">{t("conditioners")}</Link></li>
-            <li><Link className={pathname === "/repair" ? classes.active : ""}  onClick={()=> setActive(false)} href="repair">{t("repair")}</Link></li>
+            <li><Link className={pathname === "/repair" ? classes.active : ""}  onClick={()=> setActive(false)} href="repair">{t("maintenance work")}</Link></li>
             <li>
               <div className={classes.block__btn__navbar}>
                    <button onClick={toggleBtn} className={classes.language__change}><Globe size={20}/>{t("translate")}</button>
@@ -84,7 +84,7 @@ export default function NavHeader() {
             <Link className={pathname === "/conditioners" ? classes.active : ""} href="conditioners">{t("conditioners")}</Link>
           </li>
           <li>
-            <Link className={pathname === "/repair" ? classes.active : ""} href="repair">{t("repair")}</Link>
+            <Link className={pathname === "/repair" ? classes.active : ""} href="repair">{t("maintenance work")}</Link>
           </li>
         </ul>
       <div className={classes.block__btn__learn__and__ask}>
