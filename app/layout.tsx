@@ -8,7 +8,7 @@ import Head from "next/head";
 
 
 export const metadata: Metadata = {
-  title: "MODUHAUSE",
+  title: "MODUHAUS",
   description: "Кондицианирование и Ремонт квартир",
   icons:{
     icon:[
