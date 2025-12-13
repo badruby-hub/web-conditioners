@@ -115,5 +115,6 @@
   "description":"Описание",
   "describe the task":"Опишите задачу подробно",
   "send":"Отправить",
-  "choose your plan":"Выберите свой план"
+  "choose your plan":"Выберите свой план",
+  "loading": "Загрузка..."
 }

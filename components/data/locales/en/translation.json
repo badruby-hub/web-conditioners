@@ -115,5 +115,6 @@
   "description": "Description",
   "describe the task": "Describe the task",
   "send": "Send",
-  "choose your plan": "Choose your plan"
+  "choose your plan": "Choose your plan",
+  "loading":"Loading..."
 }

@@ -1,9 +1,11 @@
 "use client";
 import { RxCross1 } from "react-icons/rx";
 import classes from "./popUp.module.css";
-import {  Dialog, DialogPanel, DialogTitle, Field, Fieldset, Input, Label, Legend, Select, Textarea } from "@headlessui/react";
+import {  Dialog, DialogPanel, DialogTitle, Field, Input, Label, Select, Textarea } from "@headlessui/react";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import toast from "react-hot-toast";
+import Loader from "@/components/Loader/Loader";
 
 
 interface PopUpProps {
@@ -23,10 +25,11 @@ export const PopUp = ({open, onClose}: PopUpProps)=> {
      const [numberPhone, setNumberPhone] = useState<string>("");
      const [category, setCategory] = useState<string>("");
      const [details, setDetails] = useState<string>("");
-     
+     const [isLoading, setIsLoading] = useState<Boolean>(false);
            const resetForm=()=>{
                    setFirstName("");
                    setNumberPhone("");
+                   setDetails("");
         };
      
          const sendEmailTelegram = async (event: React.FormEvent<HTMLFormElement>) => {
@@ -41,6 +44,7 @@ const applicationForm = `
 Детали: ${details}
              `
             try {
+              setIsLoading(true);
               const resRequest = await fetch("/api/requests/send",{
                  method:"POST",
                  headers:{
@@ -49,14 +53,18 @@ const applicationForm = `
                  body:JSON.stringify({ userMessage: applicationForm}),
              });
              if(resRequest.ok) {
-                 console.log("заявка успешно отправлена", await resRequest.json());
+                 console.log("Заявка успешно отправлена");
                  resetForm();
+                 toast.success("Заявка успешно отправлена");
              }else{
-                   console.log("Ошибка при отправке", await resRequest.text());
+                   console.log("Ошибка при отправке");
+                   toast.error("Ошибка при отправке");
              }
             } catch (error) {
              
                console.log("Произошла ошибка при отправке:" + error);
+            }finally{
+               setIsLoading(false);
             }
          } 
    return   <Dialog open={open} onClose={onClose}>
@@ -89,7 +97,7 @@ const applicationForm = `
                         <Label>{t("description")}</Label>
                         <Textarea name="details" value={details} onChange={(e)=> setDetails(e.target.value)} rows={5} placeholder={t("describe the task")}/>
                     </Field>
-                  <button className={classes.submit__btn} type="submit">{t("send")}</button>
+                  <button className={`${isLoading ? classes.submit__none__class : classes.submit__btn}`} type="submit">{isLoading ? <Loader/>: t("send")}</button>
                    </form>
                 </DialogPanel>
             </div>
@@ -103,7 +111,7 @@ export const PopUpСalculation = ({openCalc, onCloseCalc}: PopUpCalcProps)=> {
      const [firstName, setFirstName] = useState<string>("");
      const [numberPhone, setNumberPhone] = useState<string>("");
      const [category, setCategory] = useState<string>("");
-     
+     const [isLoading, setIsLoading] = useState<Boolean>(false);
            const resetForm=()=>{
                    setFirstName("");
                    setNumberPhone("");
@@ -120,6 +128,7 @@ const applicationForm = `
 Номер телефона: ${numberPhone}
              `
             try {
+              setIsLoading(true);
               const resRequest = await fetch("/api/requests/send",{
                  method:"POST",
                  headers:{
@@ -128,14 +137,18 @@ const applicationForm = `
                  body:JSON.stringify({ userMessage: applicationForm}),
              });
              if(resRequest.ok) {
-                 console.log("заявка успешно отправлена", await resRequest.json());
+                 console.log("Заявка успешно отправлена");
                  resetForm();
+                 toast.success("Заявка успешно отправлена");
              }else{
-                   console.log("Ошибка при отправке", await resRequest.text());
+                   console.log("Ошибка при отправке");
+                   toast.error("Ошибка при отправке");
              }
             } catch (error) {
              
                console.log("Произошла ошибка при отправке:" + error);
+            }finally{
+                setIsLoading(false);
             }
          } 
    return   <Dialog open={openCalc} onClose={onCloseCalc}>
@@ -162,7 +175,7 @@ const applicationForm = `
                             </Select>
                         </div>
                     </Field>
-                  <button className={classes.submit__btn} type="submit">{t("send")}</button>
+                  <button className={`${isLoading ? classes.submit__none__class : classes.submit__btn}`} type="submit">{isLoading ? <Loader/>: t("send")}</button>
                   </form>
                 </DialogPanel>
             </div>

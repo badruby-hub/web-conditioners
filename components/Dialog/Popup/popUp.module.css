@@ -117,3 +117,9 @@
     font-size: 15px;
     color: white;
 }
+
+.submit__none__class{
+    background: none;
+    border: none;
+    outline: none;
+}
