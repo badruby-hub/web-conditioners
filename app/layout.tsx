@@ -49,7 +49,23 @@ export default function RootLayout({
     `,
   }}
 />
-
+  {/* Google Ads / gtag.js */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17651203004"
+          strategy="afterInteractive"
+        />
+        <Script
+          id="gtag-init"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'AW-17651203004');
+            `,
+          }}
+        />
       </head>
       <body>
   <noscript>
