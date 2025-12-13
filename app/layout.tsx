@@ -4,7 +4,6 @@ import NavHeader from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
 import "./i18n";
 import I18nProvider from "@/components/I18nProvider/I18nProvider";
-import Head from "next/head";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
 

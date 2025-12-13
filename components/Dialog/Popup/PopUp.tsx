@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import Loader from "@/components/Loader/Loader";
+import { sendConversion } from "@/components/lib/gtag";
 
 
 interface PopUpProps {
@@ -56,6 +57,7 @@ const applicationForm = `
                  console.log("Заявка успешно отправлена");
                  resetForm();
                  toast.success("Заявка успешно отправлена");
+                 sendConversion();
              }else{
                    console.log("Ошибка при отправке");
                    toast.error("Ошибка при отправке");
@@ -140,6 +142,7 @@ const applicationForm = `
                  console.log("Заявка успешно отправлена");
                  resetForm();
                  toast.success("Заявка успешно отправлена");
+                 sendConversion();
              }else{
                    console.log("Ошибка при отправке");
                    toast.error("Ошибка при отправке");

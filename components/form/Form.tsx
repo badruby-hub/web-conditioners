@@ -3,6 +3,7 @@ import classes from "./form.module.css"
 import { useTranslation } from "react-i18next"
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { sendConversion } from "../lib/gtag";
 
 
 export default function Form() {
@@ -42,6 +43,7 @@ export default function Form() {
             console.log("Заявка успешно отправлена");
             resetForm();
             toast.success("Заявка успешно отправлена");
+            sendConversion();
         }else{
               console.log("Ошибка при отправке");
               toast.error("Ошибка при отправке");
