@@ -6,6 +6,7 @@ import "./i18n";
 import I18nProvider from "@/components/I18nProvider/I18nProvider";
 import Head from "next/head";
 import Script from "next/script";
+import { Toaster } from "react-hot-toast";
 
 
 export const metadata: Metadata = {
@@ -59,8 +60,9 @@ export default function RootLayout({
       style={{ display: "none", visibility: "hidden" }}
     ></iframe>
   </noscript>
-              <I18nProvider>
-          <NavHeader/>
+      <Toaster/>
+      <I18nProvider>
+      <NavHeader/>
         <main>
             {children}
         </main>
