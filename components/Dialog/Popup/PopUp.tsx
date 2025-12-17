@@ -36,8 +36,7 @@ export const PopUp = ({open, onClose}: PopUpProps)=> {
                             <a 
                             href="tel:+971588125032"
                             onClick={
-                            (e)=>{
-                                e.preventDefault();
+                            ()=>{
                                 sendConversion("tel:+971588125032");
                             }
                             }>
@@ -56,8 +55,7 @@ export const PopUp = ({open, onClose}: PopUpProps)=> {
                             target="_blank" 
                             rel="noopener noreferrer"
                             onClick={
-                            (e)=>{
-                                e.preventDefault();
+                            ()=>{
                                 sendConversion("https://t.me/ModuHaus");
                             }
                             }
@@ -77,8 +75,7 @@ export const PopUp = ({open, onClose}: PopUpProps)=> {
                             target="_blank" 
                             rel="noopener noreferrer"
                             onClick={
-                            (e)=>{
-                                e.preventDefault();
+                            ()=>{
                                 sendConversion("https://wa.me/971588125032");
                             }
                             }
