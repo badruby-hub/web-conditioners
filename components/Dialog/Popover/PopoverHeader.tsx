@@ -2,14 +2,14 @@ import { Popover, PopoverButton, PopoverPanel, Transition } from "@headlessui/re
 import { PhoneCall, Send } from "lucide-react"
 import { useTranslation } from "react-i18next"
 
-import classes from "./popover.module.css";
+import classes from "./popoverHeader.module.css";
 import Link from "next/link";
 import { FaWhatsapp } from "react-icons/fa";
 
 
 
 
-export const PopOver = () =>{
+export const PopOverHeader = () =>{
     const {t} = useTranslation();
     return (
     <Popover className={classes.block__popOver}>
@@ -39,3 +39,6 @@ export const PopOver = () =>{
     )}
     </Popover>)
 }
+
+
+

@@ -34,6 +34,7 @@ export default function Main() {
       </section>
       {/* BLOCK-2 */}
       <section className={classes.container__one}>
+{/* импортированные компоненты модальных окан */}
          <PopUp open={isOpen} onClose={()=> setIsOpen(false)}/>
          <PopUpСalculation openCalc={isOpenCalc} onCloseCalc={()=> setIsOpenCalc(false)}/>   
         <div className={classes.block__zagolovok}>

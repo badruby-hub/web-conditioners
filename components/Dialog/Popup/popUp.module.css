@@ -118,8 +118,69 @@
     color: white;
 }
 
-.submit__none__class{
+.submit__none__class {
     background: none;
     border: none;
     outline: none;
+}
+
+
+
+
+/* Модальное окно контактная информация */
+
+
+.popUp_contact_info {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 30px 15px;
+    margin-inline: 20px;
+    color: #3f485a;
+    position: relative;
+}
+
+.title_contact_info {
+    font-size: 15px;
+}
+
+.li {
+    list-style-type: none;
+    background: #e9eaec;
+    margin-block: 13px;
+    border-radius: 5px;
+}
+
+.li a {
+    text-decoration: none;
+    color: black;
+}
+
+.block_content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.block_info {
+    display: flex;
+    flex-direction: column;
+}
+
+.block_info h5 {
+    color: #707a8f;
+}
+
+.block_info span {
+    font-size: 18px;
+}
+
+.icon {
+    display: flex;
+    background: #ffffff;
+    padding: 6px;
+    border-radius: 5px;
 }

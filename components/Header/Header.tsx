@@ -6,7 +6,7 @@ import {useEffect, useState } from "react";
 import { Globe } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { toggleBtn } from "../utils/Button/toggleLanguage";
-import { PopOver } from "../Dialog/Popover/Popover";
+import { PopOverHeader } from "../Dialog/Popover/PopoverHeader";
 import { usePathname } from "next/navigation";
 
 
@@ -70,7 +70,7 @@ export default function NavHeader() {
             <li>
               <div className={classes.block__btn__navbar}>
                    <button onClick={toggleBtn} className={classes.language__change}><Globe size={20}/>{t("translate")}</button>
-                   <PopOver/>
+                   <PopOverHeader/>
              </div>
       </li>
           </ul>
@@ -89,7 +89,7 @@ export default function NavHeader() {
         </ul>
       <div className={classes.block__btn__learn__and__ask}>
          <button onClick={toggleBtn} className={classes.language__change}><Globe size={20}/>{t("translate")}</button>
-          <PopOver/>
+          <PopOverHeader/>
       </div>
       </nav>
     </header>
