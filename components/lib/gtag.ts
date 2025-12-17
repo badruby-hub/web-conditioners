@@ -13,8 +13,13 @@ export const sendConversion = (url?: string)=>{
             currency: "AED",
             event_callback: function (){
                             if(url){
-                window.location.href = url;
-            }
+                                setTimeout(() => {
+            window.location.href = url;
+          }, 150);
+            } else if (url) {
+    window.location.href = url;
+  }
+
             }
 
         })
