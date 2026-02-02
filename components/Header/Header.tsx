@@ -67,6 +67,9 @@ export default function NavHeader() {
           <ul className={`${active ? classes.container__navbar__active : classes.container__navbar}`}>
             <li><Link className={pathname === "/" ? classes.active : ""} onClick={()=> setActive(false)} href="/">{t("home")}</Link></li>
             <DropDown onItemClick={()=> setActive(false)} />
+          <li>
+            <Link onClick={()=> setActive(false)} className={pathname === "/contact-us" ? classes.active : ""} href="/contact-us">{t("contact-us")}</Link>
+          </li>
             <li>
               <div className={classes.block__btn__navbar}>
                    <button onClick={toggleBtn} className={classes.language__change}><Globe size={20}/>{t("translate")}</button>

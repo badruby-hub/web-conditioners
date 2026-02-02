@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Droplet, Hammer, Lightbulb, Paintbrush, Star, Wind } from "lucide-react";
+import { ChevronRight, Columns3Cog, Droplet, Hammer, Lightbulb, Paintbrush, Star, Wind } from "lucide-react";
 import Link from "next/link";
 import { Reviews } from "./main.props";
 import { useTranslation } from "react-i18next";
@@ -107,7 +107,144 @@ export default function Main() {
         </div>
         </div>
       </section>
-      {/*BLOCK-2*/}
+
+          {/* секция услуг */}
+      <section className={classes.container__service}>
+         {/* <PopUp open={isOpen} onClose={()=> setIsOpen(false)}/> */}
+        <div className={classes.block__zagolovok}>
+            <h1>
+               {t("our renovation")}
+            </h1>
+            <p>{t("complete solutions")}</p>
+        </div>
+            <div className={classes.section__card__one}>
+                <Link className={classes.link__card} href="/conditioners">
+                       <div className={`${classes.card__premium} ${classes.card__one}`}>
+                          <div>
+                          <div className={classes.bg_container_svg}>
+                          <Wind size={34}/>
+                          </div>
+                          <h5>{t("ducted ac")}</h5>
+                          </div>
+
+                          <p>{t("complete installation")}</p>
+                          <div className={classes.btn__more}>
+                            <span>{t("learn more")}</span>
+                            <ChevronRight className={classes.arrow} size={17}/>
+                             </div>
+                       </div>
+                       </Link>
+
+                       <Link className={classes.link__card} href="/painting">
+                        <div className={`${classes.card__premium} ${classes.card__one}`}>
+                         <div>
+                          <div className={classes.bg_container_svg}>
+                          <Paintbrush size={34}/>
+                          </div>
+                          <h5>{t("painting & wall")}</h5>
+                          </div>
+                          <p>{t("professional painting")}</p>
+                          <div className={classes.btn__more}>
+                            <span>{t("learn more")}</span>
+                            <ChevronRight className={classes.arrow} size={17}/>
+                             </div>
+                       </div>
+                       </Link>
+
+                       <Link className={classes.link__card} href="/flooring">
+                       <div className={`${classes.card__fast__service} ${classes.card__one}`}>
+                        <div>
+                          <div className={classes.bg_container_svg}>
+                           <Hammer size={34}/>
+                          </div>
+                          <h5>{t("flooring installation")}</h5>
+                          </div>
+                          <p>{t("expert installation")}</p>
+                          <div className={classes.btn__more}>
+                            <span>{t("learn more")}</span>
+                            <ChevronRight className={classes.arrow} size={17}/>
+                             </div>
+                       </div>
+                       </Link>
+                       <Link className={classes.link__card} href="/electrical">
+                       <div className={`${classes.card__extended__warranty} ${classes.card__one}`}>
+                        <div>
+                          <div className={classes.bg_container_svg}>
+                           <Lightbulb size={34}/>
+                          </div>
+                          <h5>{t("electrical works")}</h5>
+                          </div>
+                          <p>{t("complete electrical")}</p>
+                          <div className={classes.btn__more}>
+                            <span>{t("learn more")}</span>
+                            <ChevronRight className={classes.arrow} size={17}/>
+                             </div>
+                       </div>
+                       </Link>
+                       <Link className={classes.link__card} href="/plumbing">
+                       <div className={`${classes.card__team__experts} ${classes.card__one}`}>
+                         <div>
+                          <div className={classes.bg_container_svg}>
+                            <Droplet size={34}/>
+                          </div>
+                          <h5>{t("plumbing & fixtures")}</h5>
+                          </div>
+                          <p>{t("professional plumbing")}</p>
+                          <div className={classes.btn__more}>
+                            <span>{t("learn more")}</span>
+                            <ChevronRight className={classes.arrow} size={17}/>
+                             </div>
+                       </div>
+                       </Link>
+                       <Link className={classes.link__card} href="#">
+                        <div className={`${classes.card__team__experts} ${classes.card__one}`}>
+                            <div>
+                          <div className={classes.bg_container_svg}>
+                            <Columns3Cog size={34}/>
+                          </div>
+                          <h5>{t("gypsum services")}</h5>
+                          </div>
+                          <p>{t("gypsum partition")}</p>
+                          <div className={classes.btn__more}>
+                            <span>{t("learn more")}</span>
+                            <ChevronRight className={classes.arrow} size={17}/>
+                             </div>
+                       </div>
+                       </Link>
+            </div>
+      </section>
+       {/*BLOCK-2*/}
+      <section className={classes.container__three}>
+           <div className={classes.block__img__work}>
+            <div className={classes.block__zagolovok}>
+             <h1>
+                {t("our works")}
+             </h1>
+             <p>{t("explore our")}</p>
+            </div>
+            <div className={classes.blocks__img__my__work}>
+                <div className={classes.contain__img}>
+                    <img src="/portfolio/image-1.jpg" alt="картинка" />
+                </div>
+                <div className={classes.contain__img}>
+                    <img src="/portfolio/image-2.jpeg" alt="картинка" />
+                </div>
+                <div className={classes.contain__img}>
+                    <img src="/portfolio/image-3.jpeg" alt="картинка" />
+                </div>
+                <div className={classes.contain__img}>
+                    <img src="/portfolio/image-4.jpeg" alt="картинка" />
+                </div>
+                <div className={classes.contain__img}>
+                    <img src="/portfolio/image-5.jpg" alt="картинка" />
+                </div>
+                <div className={classes.contain__img}>
+                    <img src="/portfolio/image-6.jpg" alt="картинка" />
+                </div>
+            </div>
+           </div>
+      </section>
+      {/*BLOCK-3*/}
       <section className={classes.container__two}>
             <h1>
                 {t("why choose us")} 
@@ -163,91 +300,6 @@ export default function Main() {
             </div>
       </section>
 {/* 
-      {/* секция услуг 
-      <section className={classes.container__service}>
-         {/* <PopUp open={isOpen} onClose={()=> setIsOpen(false)}/> 
-        <div className={classes.block__zagolovok}>
-            <h1>
-               {t("our renovation")}
-            </h1>
-            <p>{t("complete solutions")}</p>
-        </div>
-            <div className={classes.section__card__one}>
-                       <div className={`${classes.card__premium} ${classes.card__one}`}>
-                          <div className={classes.bg_container_svg}>
-                          <Wind size={34}/>
-                          </div>
-                          <h5>{t("ducted ac")}</h5>
-                          <p>{t("complete installation")}</p>
-                       </div>
-                        <div className={`${classes.card__premium} ${classes.card__one}`}>
-                          <div className={classes.bg_container_svg}>
-                          <Paintbrush size={34}/>
-                          </div>
-                          <h5>{t("painting & wall")}</h5>
-                          <p>{t("professional painting")}</p>
-                       </div>
-                       <div className={`${classes.card__fast__service} ${classes.card__one}`}>
-                          <div className={classes.bg_container_svg}>
-                           <Hammer size={34}/>
-                          </div>
-                          <h5>{t("flooring installation")}</h5>
-                          <p>{t("expert installation")}</p>
-                       </div>
-                       <div className={`${classes.card__extended__warranty} ${classes.card__one}`}>
-                          <div className={classes.bg_container_svg}>
-                           <Lightbulb size={34}/>
-                          </div>
-                          <h5>{t("electrical works")}</h5>
-                          <p>{t("complete electrical")}</p>
-                       </div>
-                       <div className={`${classes.card__team__experts} ${classes.card__one}`}>
-                          <div className={classes.bg_container_svg}>
-                            <Droplet size={34}/>
-                          </div>
-                          <h5>{t("plumbing & fixtures")}</h5>
-                          <p>{t("professional plumbing")}</p>
-                       </div>
-                        <div className={`${classes.card__team__experts} ${classes.card__one}`}>
-                          <div className={classes.bg_container_svg}>
-                            <Droplet size={34}/>
-                          </div>
-                          <h5>{t("gypsum services")}</h5>
-                          <p>{t("gypsum partition")}</p>
-                       </div>
-            </div>
-      </section>
-      {/*BLOCK-3
-      <section className={classes.container__three}>
-           <div className={classes.block__img__work}>
-            <div className={classes.block__zagolovok}>
-             <h1>
-                {t("our works")}
-             </h1>
-             <p>{t("explore our")}</p>
-            </div>
-            <div className={classes.blocks__img__my__work}>
-                <div className={classes.contain__img}>
-                    <img src="/portfolio/image-1.jpg" alt="картинка" />
-                </div>
-                <div className={classes.contain__img}>
-                    <img src="/portfolio/image-2.jpeg" alt="картинка" />
-                </div>
-                <div className={classes.contain__img}>
-                    <img src="/portfolio/image-3.jpeg" alt="картинка" />
-                </div>
-                <div className={classes.contain__img}>
-                    <img src="/portfolio/image-4.jpeg" alt="картинка" />
-                </div>
-                <div className={classes.contain__img}>
-                    <img src="/portfolio/image-5.jpg" alt="картинка" />
-                </div>
-                <div className={classes.contain__img}>
-                    <img src="/portfolio/image-6.jpg" alt="картинка" />
-                </div>
-            </div>
-           </div>
-      </section> */}
        {/*BLOCK-2 слайдер сравнения наших работ наше портфолио*/}
       <section className={classes.container__two}>
         <div className={classes.block__reviews}>
@@ -366,6 +418,16 @@ export default function Main() {
       </section>
     </>
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

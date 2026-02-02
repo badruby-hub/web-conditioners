@@ -214,6 +214,29 @@
     color: #707a8f;
 }
 
+
+
+.block__zagolovok {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.block__zagolovok h1 {
+    margin-bottom: 10px;
+}
+
+.link__card {
+    text-decoration: none;
+    color: #000000;
+}
+
+.section__card__one {
+    max-width: 1200px;
+    display: grid;
+    gap: 24px;
+}
+
+
 .section__card__one {
     max-width: 1200px;
     display: grid;
@@ -221,10 +244,15 @@
 }
 
 .card__one {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
     background: #dfe0df;
     border-radius: 10px;
     padding: 24px;
     box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.21);
+    min-height: 340px;
 }
 
 .card__one h5 {
@@ -234,8 +262,8 @@
 }
 
 .card__one p {
-    font-size: 14px;
-    line-height: 1.7;
+    font-size: 15px;
+    line-height: 1.5;
     color: #3f485a;
 }
 
@@ -253,7 +281,17 @@
 }
 
 
+.btn__more {
+    display: flex;
+    align-items: center;
+    color: #0000ff;
+    font-size: 15px;
+    margin-top: 10px;
+}
 
+.arrow {
+    padding-top: 2px;
+}
 
 
 /* контейнер с портфолио работ */
@@ -265,16 +303,6 @@
 
 .block__img__work {
     padding-inline: 15px;
-}
-
-
-.block__zagolovok {
-    text-align: center;
-    margin-bottom: 35px;
-}
-
-.block__zagolovok h1 {
-    margin-bottom: 10px;
 }
 
 
@@ -442,23 +470,6 @@
 
 
 
-@media(min-width:768px) {
-    .video_bg_content p {
-        font-size: 24px;
-    }
-
-    .swiper__text {
-        font-size: 18px;
-    }
-
-    .swiper__full__name__author {
-        font-size: 18px;
-    }
-      .section__card__one {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-}
-
 
 @media(min-width:550px) {
     .section__card {
@@ -479,6 +490,24 @@
     }
 }
 
+
+@media(min-width:768px) {
+    .video_bg_content p {
+        font-size: 24px;
+    }
+
+    .swiper__text {
+        font-size: 18px;
+    }
+
+    .swiper__full__name__author {
+        font-size: 18px;
+    }
+      .section__card__one {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    
+}
 
 
 @media(min-width:800px) {
@@ -501,6 +530,6 @@
     }
 
     .blocks__img__my__work {
-        padding-inline: 125px;
+        padding-inline: 15px;
     }
 }

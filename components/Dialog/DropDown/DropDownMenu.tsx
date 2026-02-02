@@ -9,7 +9,6 @@ import { ChevronDown } from "lucide-react";
 
 
 
-
 type DropDownProps ={
    onItemClick?: ()=> void;
 }
@@ -30,27 +29,20 @@ export const DropDown = ({onItemClick}: DropDownProps) =>{
    return (
           <li
           className={classes.wrapper}
-          onMouseEnter ={()=>setOpen(true)}
-          onMouseLeave={()=>setOpen(false)}
+          onClick={()=>setOpen(!open)}
           >
-              <Link 
-              href="/services"
-              className={`${pathname === "/services" ? classes.active : ""} ${classes.link}`}
-              onClick={
-               ()=>{
-                setOpen(false)
-                onItemClick?.()}
-                }>
+              <div 
+              className={`${classes.services} ${classes.link}`}>
             {t("services")}
              <span className={`${classes.chevron} ${open ? classes.open : ""}`}>
                 <ChevronDown size={18}/>
              </span>
-              </Link>
+              </div>
             {open && (<ul className={`${classes.menu}`}>
             {
                 links.map(({href,label})=>(
                     <li key={href}>
-                       <Link onClick={()=>{setOpen(false); onItemClick?.()}} className={`${classes.item}`}  href={href}>{label}</Link>
+                       <Link onClick={()=>{setOpen(false); onItemClick?.()}} className={`${pathname === href ? classes.active : ""} ${classes.item}`}  href={href}>{label}</Link>
                     </li>
                     
                 ))
