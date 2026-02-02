@@ -8,6 +8,7 @@ import { useTranslation } from "react-i18next";
 import { toggleBtn } from "../utils/Button/toggleLanguage";
 import { PopOverHeader } from "../Dialog/Popover/PopoverHeader";
 import { usePathname } from "next/navigation";
+import { DropDown } from "../Dialog/DropDown/DropDownMenu";
 
 
 
@@ -65,8 +66,7 @@ export default function NavHeader() {
           </li>
           <ul className={`${active ? classes.container__navbar__active : classes.container__navbar}`}>
             <li><Link className={pathname === "/" ? classes.active : ""} onClick={()=> setActive(false)} href="/">{t("home")}</Link></li>
-            <li><Link className={pathname === "/conditioners" ? classes.active : ""} onClick={()=> setActive(false)} href="conditioners">{t("conditioners")}</Link></li>
-            <li><Link className={pathname === "/repair" ? classes.active : ""}  onClick={()=> setActive(false)} href="repair">{t("maintenance work")}</Link></li>
+            <DropDown onItemClick={()=> setActive(false)} />
             <li>
               <div className={classes.block__btn__navbar}>
                    <button onClick={toggleBtn} className={classes.language__change}><Globe size={20}/>{t("translate")}</button>
@@ -80,11 +80,9 @@ export default function NavHeader() {
           <li>
             <Link className={pathname === "/" ? classes.active : ""} href="/">{t("home")}</Link>
           </li>
+            <DropDown/>
           <li>
-            <Link className={pathname === "/conditioners" ? classes.active : ""} href="conditioners">{t("conditioners")}</Link>
-          </li>
-          <li>
-            <Link className={pathname === "/repair" ? classes.active : ""} href="repair">{t("maintenance work")}</Link>
+            <Link className={pathname === "/contact-us" ? classes.active : ""} href="/contact-us">{t("contact-us")}</Link>
           </li>
         </ul>
       <div className={classes.block__btn__learn__and__ask}>

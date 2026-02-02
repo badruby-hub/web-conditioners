@@ -5,10 +5,11 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url("https://web-conditioners.vercel.app/video/video-poster-bg-fon-2.png");
-    background-size: cover;
+    background:linear-gradient(#707a8f, #3f485a);
+    /* background-image: url("https://web-conditioners.vercel.app/video/video-poster-bg-fon-2.png"); */
+    /* background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
 }
 
 .video_bg video {
@@ -22,8 +23,11 @@
 }
 
 .video_bg_content {
-    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    z-index: 2;
     color: white;
 }
 
@@ -38,11 +42,14 @@
 
 }
 
-.video_bg_content .btn__ask {
+ .btn__ask {
+    text-decoration: none;
+    color: #f0f0f0;
+    display: block;
     padding: 10px;
     font-weight: 600;
-    color: white;
     background: linear-gradient(0.25turn, #3f485a, #707a8f);
+    box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.2);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -52,6 +59,11 @@
     display: flex;
     align-items: center;
     gap: 10px;
+}
+
+.btn__ask a {
+    color: white;
+    text-decoration: none;
 }
 
 .btn__ask span::after {
@@ -81,7 +93,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: #e9eaec;
 }
 
@@ -177,18 +188,73 @@
     color: #3f485a;
 }
 
+
+/* блок с услугами   */
+
+.container__service {
+    padding: 100px 15px 100px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #e9eaec;
+}
+
+
+.block__zagolovok {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.block__zagolovok h1 {
+    margin-bottom: 24px;
+}
+
+.block__zagolovok p {
+    color: #707a8f;
+}
+
+.section__card__one {
+    max-width: 1200px;
+    display: grid;
+    gap: 24px;
+}
+
+.card__one {
+    background: #dfe0df;
+    border-radius: 10px;
+    padding: 24px;
+    box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.21);
+}
+
+.card__one h5 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-block: 25px;
+}
+
+.card__one p {
+    font-size: 14px;
+    line-height: 1.7;
+    color: #3f485a;
+}
+
 .bg_container_svg {
     color: white;
     background: linear-gradient(#3f485a, #707a8f);
     border-radius: 10px;
     padding: 10px;
-    width: 64px;
-    height: 64px;
+    width: 50px;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 10px;
 }
+
+
+
+
 
 /* контейнер с портфолио работ */
 
@@ -240,7 +306,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: #e9eaec;
 }
 
 .block__reviews {
@@ -340,6 +406,11 @@
     gap: 10px;
 }
 
+.block__btn__navigation button { 
+    font-size: 20px;
+    padding: 15px 30px;
+}
+
 .btn__pages {
     color: black;
     text-decoration: none;
@@ -365,6 +436,10 @@
 }
 
 
+/* split slide */
+
+
+
 
 
 @media(min-width:768px) {
@@ -379,12 +454,16 @@
     .swiper__full__name__author {
         font-size: 18px;
     }
+      .section__card__one {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 
 @media(min-width:550px) {
     .section__card {
         grid-template-columns: repeat(4, minmax(0, 1fr));
+        padding-inline: 20px;
     }
 
     .section__card__two {
@@ -418,7 +497,7 @@
 @media(min-width:1000px) {
     .section__card__two {
         grid-template-columns: repeat(4, minmax(0, 1fr));
-        padding-inline: 100px;
+        padding-inline: 20px;
     }
 
     .blocks__img__my__work {

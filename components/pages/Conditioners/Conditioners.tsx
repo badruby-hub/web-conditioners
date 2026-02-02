@@ -5,6 +5,7 @@ import classes from "./conditioners.module.css";
 import { useTranslation } from "react-i18next";
 import { PopUp, PopUpСalculation } from "@/components/Dialog/Popup/PopUp";
 import { useState } from "react";
+import Link from "next/link";
 
 
 export default function Main() {
@@ -15,7 +16,6 @@ export default function Main() {
     return <>
         <section className={`${classes.video_bg}`}>
         <video  
-         poster="https://moduhaus.ae/video/conditioners/conditioners-poster-fon-2.png"
          autoPlay
          muted
          playsInline
@@ -29,7 +29,7 @@ export default function Main() {
         <div className={classes.video_bg_content}>
             <h1>{t("ducted ac")}</h1>
             <p>{t("professional climate")}</p>
-            <button onClick={()=> setIsOpen(true)} className={classes.btn__ask}><span><PhoneCall size={17}/>{t("request a technician")}</span></button>
+            <Link className={classes.btn__ask} href="tel:+971588125032"><span><PhoneCall size={17}/>{t("request a technician")}</span></Link>
         </div>
       </section>
       {/* BLOCK-2 */}

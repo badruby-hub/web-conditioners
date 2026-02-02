@@ -89,7 +89,7 @@ export default function Repair() {
                        </div>
             </div>
       </section>
-       {/*BLOCK-2 слайдер сравнения наших работ*/}
+       {/*BLOCK-2 слайдер сравнения наших работ наше портфолио}
       <section className={classes.container__two}>
         <div className={classes.block__reviews}>
          <div className={classes.block__zagolovok}>
@@ -131,7 +131,7 @@ export default function Repair() {
              </div>
              </div>
         </div>
-      </section>
+      </section>*/}
       {/*BLOCK-3 рассказ историй успеха*/}
       <section className={classes.container__three}>
         <div className={classes.block__reviews}>
@@ -194,7 +194,7 @@ export default function Repair() {
              </div>
         </div>
       </section>
-        {/*BLOCK-4 запрос на консультацию */}
+        {/*BLOCK-4 запрос на консультацию 
       <section className={classes.container__four}>
         <div className={classes.block__form}>
          <div className={classes.block__zagolovok}>
@@ -207,7 +207,7 @@ export default function Repair() {
              <Form/>
             </div>
         </div>
-      </section>
+      </section>*/}
       {/* BLOCK-5 Запрос на составление сметы */}
       <section className={classes.container__five}>
          <div className={classes.block__smeta}>

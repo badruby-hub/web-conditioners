@@ -5,10 +5,6 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background-image: url("https://web-conditioners.vercel.app/video/conditioners/conditioners-poster-fon-2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .video_bg video {
@@ -22,10 +18,11 @@
 }
 
 .video_bg_content {
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
-    z-index: 2;
+    text-align: center;
     color: white;
     padding-inline: 15px;
 }
@@ -40,13 +37,11 @@
     max-width: 37rem;
 }
 
-.btn__ask {
-    display: block;
+.video_bg_content .btn__ask {
     padding: 10px;
     font-weight: 600;
     color: white;
     background: linear-gradient(0.25turn, #3f485a, #707a8f);
-     text-decoration: none;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -61,7 +56,6 @@
 .btn__ask:hover {
     opacity: .9;
 }
-
 
 .shadow_bg {
     position: absolute;
@@ -293,7 +287,81 @@
 }
 
 
+/* 4 контейнер навигации */
 
+
+.container__five {
+    background: linear-gradient(0.25turn, #3f485a, #707a8f);
+    padding-block: 100px;
+    color: #f0f0f0;
+}
+
+
+.block__navigation__pages {
+    padding-inline: 15px;
+}
+
+.block__navigation__pages h1,
+.block__navigation__pages p {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.block__navigation__pages h1 {
+    font-size: 40px;
+    line-height: 1.2;
+}
+
+.block__navigation__pages p {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.block__btn__navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.block__btn__navigation button { 
+    font-size: 20px;
+    padding: 15px 30px;
+}
+
+.btn__ask {
+    display: block;
+    text-decoration: none;
+    color: #f0f0f0;
+    padding: 10px;
+    font-weight: 600;
+    background: linear-gradient(0.25turn, #3f485a, #707a8f);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.btn__ask span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn__ask a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn__ask span::before {
+    content: "➔";
+    font-size: 20px;
+}
+
+.btn__ask:hover {
+    opacity: .9;
+}
 
 @media(min-width:770px) {
 
@@ -303,16 +371,19 @@
     }
 
     .video_bg_content p {
-        font-size: 16px;
+        font-size: 25px;
     }
 
     .block__zagolovok p {
         font-size: 18px;
     }
 
-    .section__card__one,
-    .section__card__two {
+    .section__card__one{
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .section__card__two {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        margin-inline: 5rem;
     }
 
     .card__one h5 {
@@ -324,7 +395,7 @@
     }
 
     .card h3 {
-        font-size: 20px;
+        font-size: 17px;
     }
 
     .card p {

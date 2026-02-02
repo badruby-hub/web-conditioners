@@ -8,18 +8,22 @@ import "swiper/css/pagination";
 
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { Star } from "lucide-react";
+import { Droplet, Hammer, Lightbulb, Paintbrush, Star, Wind } from "lucide-react";
 import Link from "next/link";
 import { Reviews } from "./main.props";
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
 
+import comparisonData from "@/components/data/Comparison.json";
+import { Comparison } from "./main.props";
+
 import { PopUp } from "../Dialog/Popup/PopUp";
+import Split from "../Split/split";
 
 type Lang = "ru" | "en";
 
 const reviews: Reviews[] = reviewsData; 
-
+const slide:Comparison[]= comparisonData;
 
 
 
@@ -29,7 +33,7 @@ export default function Main() {
     return <>
        {/*video bg*/}
       <section className={`${classes.video_bg}`}>
-             <video 
+              <video 
                poster="https://moduhaus.ae/video/video-poster-bg-fon-2.png"
                autoPlay
                muted
@@ -39,11 +43,11 @@ export default function Main() {
                >
                 <source src="https://moduhaus.ae/video/video-bg-fon-2.mp4" type="video/mp4" />
                </video>
-        <div className={classes.shadow_bg}></div>
+        <div className={classes.shadow_bg}></div> 
         <div className={classes.video_bg_content}>
             <h1>moduhaus</h1>
             <p>{t("modern")}</p>
-            <button onClick={()=> setIsOpen(true)} className={classes.btn__ask}><span>{t("get consultation")}</span></button>
+            <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("get consultation")}</span></Link>
         </div>
       </section>
            {/*BLOCK-1*/}
@@ -158,7 +162,62 @@ export default function Main() {
                        </div>
             </div>
       </section>
-      {/*BLOCK-3*/}
+{/* 
+      {/* секция услуг 
+      <section className={classes.container__service}>
+         {/* <PopUp open={isOpen} onClose={()=> setIsOpen(false)}/> 
+        <div className={classes.block__zagolovok}>
+            <h1>
+               {t("our renovation")}
+            </h1>
+            <p>{t("complete solutions")}</p>
+        </div>
+            <div className={classes.section__card__one}>
+                       <div className={`${classes.card__premium} ${classes.card__one}`}>
+                          <div className={classes.bg_container_svg}>
+                          <Wind size={34}/>
+                          </div>
+                          <h5>{t("ducted ac")}</h5>
+                          <p>{t("complete installation")}</p>
+                       </div>
+                        <div className={`${classes.card__premium} ${classes.card__one}`}>
+                          <div className={classes.bg_container_svg}>
+                          <Paintbrush size={34}/>
+                          </div>
+                          <h5>{t("painting & wall")}</h5>
+                          <p>{t("professional painting")}</p>
+                       </div>
+                       <div className={`${classes.card__fast__service} ${classes.card__one}`}>
+                          <div className={classes.bg_container_svg}>
+                           <Hammer size={34}/>
+                          </div>
+                          <h5>{t("flooring installation")}</h5>
+                          <p>{t("expert installation")}</p>
+                       </div>
+                       <div className={`${classes.card__extended__warranty} ${classes.card__one}`}>
+                          <div className={classes.bg_container_svg}>
+                           <Lightbulb size={34}/>
+                          </div>
+                          <h5>{t("electrical works")}</h5>
+                          <p>{t("complete electrical")}</p>
+                       </div>
+                       <div className={`${classes.card__team__experts} ${classes.card__one}`}>
+                          <div className={classes.bg_container_svg}>
+                            <Droplet size={34}/>
+                          </div>
+                          <h5>{t("plumbing & fixtures")}</h5>
+                          <p>{t("professional plumbing")}</p>
+                       </div>
+                        <div className={`${classes.card__team__experts} ${classes.card__one}`}>
+                          <div className={classes.bg_container_svg}>
+                            <Droplet size={34}/>
+                          </div>
+                          <h5>{t("gypsum services")}</h5>
+                          <p>{t("gypsum partition")}</p>
+                       </div>
+            </div>
+      </section>
+      {/*BLOCK-3
       <section className={classes.container__three}>
            <div className={classes.block__img__work}>
             <div className={classes.block__zagolovok}>
@@ -188,8 +247,51 @@ export default function Main() {
                 </div>
             </div>
            </div>
+      </section> */}
+       {/*BLOCK-2 слайдер сравнения наших работ наше портфолио*/}
+      <section className={classes.container__two}>
+        <div className={classes.block__reviews}>
+         <div className={classes.block__zagolovok}>
+             <h1>
+                {t("our portfolio")}
+             </h1>
+             <p>{t("see the transformation we create")}</p>
+            </div>
+            <div className={classes.block__nav__and__reviews__swiper}>
+             <Swiper
+             loop={true}
+             spaceBetween={50}
+             allowTouchMove={false}
+             simulateTouch={false}
+             pagination={{
+                el: ".portfolio-pagination" ,
+                clickable: true,
+             }}
+             navigation={{
+                nextEl: ".portfolio-next",
+                prevEl: ".portfolio-prev"
+            }}
+             modules={[Autoplay,Navigation,Pagination]}
+             className="flex"
+             >
+                {slide.map((slide:Comparison, index)=>{
+                    return(
+                <SwiperSlide key={index}>
+                      <Split leftImg={slide.left} rightImg={slide.right}/>
+                </SwiperSlide>
+                    )
+                })}
+
+             </Swiper>
+              <div className={classes.block__navigation__swiper}>
+                <div className="portfolio-prev">&lt;</div>
+                <div className="portfolio-pagination"></div>
+                <div className="portfolio-next">&gt;</div>
+             </div>
+             </div>
+        </div>
       </section>
-      {/*BLOCK-4 слайдер*/}
+      {/*BLOCK-4 слайдер с отзывами*/}
       <section className={classes.container__four}>
         <div className={classes.block__reviews}>
          <div className={classes.block__zagolovok}>
@@ -251,14 +353,13 @@ export default function Main() {
              </div>
         </div>
       </section>
-{/*BLOCK-5  навигация для перехода на страницы */}
+{/*BLOCK-5  звонок для консультации */}
       <section className={classes.container__five}>
           <div className={classes.block__navigation__pages}>
                   <h1>{t("get consultation")}</h1>
                   <p>{t("contact us today")}</p>
                   <div className={classes.block__btn__navigation}>
-                     <Link href="/conditioners" className={`${classes.btn__page__conditioner} ${classes.btn__pages}`}><span>{t("ac services")}</span></Link>
-                     <Link href="/repair" className={`${classes.btn__page__repair} ${classes.btn__pages}`}><span>{t("renovation services")}</span></Link>
+                    <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("call")}</span></Link>
                   </div>
 
           </div>
