@@ -145,7 +145,6 @@
     max-height: 0;
     transition: max-height .4s ease, opacity .4s ease;
 
-    padding: 1px;
     background: linear-gradient(#707a8f, #353b47);
     z-index: 99;
 }
@@ -159,13 +158,12 @@
     user-select: none;
 
     position: absolute;
-    top: 86px;
+    top: 96px;
     left: 0;
     z-index: 99;
 
     background: linear-gradient(#707a8ff0, #353b47f2);
     border-top: 1px solid #5e687d;
-    /* max-height: 400px; */
     opacity: 1;
     padding: 25px;
     transition: max-height .4s ease, opacity .4s ease;
