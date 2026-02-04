@@ -54,7 +54,7 @@
     display: inline-flex;
     position: absolute;
     top: 5px;
-    left: 105%;
+    left: 80px;
     transition: transform 0.25s ease;
 }
 
@@ -73,6 +73,10 @@
         box-shadow: 0px 0px 15px 7px rgba(0, 0, 0, 0.2);
         background: linear-gradient(#707a8f, #353b47);
         left: -100px;
+    }
+
+    .chevron{
+        left: 105%;
     }
 
 }
