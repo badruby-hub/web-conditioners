@@ -20,19 +20,16 @@ export default function NavHeader() {
 
   useEffect(()=>{
 
-      let prevScrollpos = window.pageYOffset;
-      const threshold = 20;
-
+      // узнаем окно равна 0 или нет . если равна 0 делаем header прозрачным 
      const handleScroll = () =>{
-            let currentScrollpos = window.pageYOffset;
-            const diff = currentScrollpos - prevScrollpos;
-      if(diff > threshold){
-         setIsScrolled(true);
-      }else if (diff < - threshold){
-        setIsScrolled(false)
-      }
-      prevScrollpos = currentScrollpos;
+        if(window.scrollY === 0){
+          setIsScrolled(false);
+        }else{
+          setIsScrolled(true);
+        }
      }
+        // вызываем функцию, проверить позицию 
+      handleScroll(); 
 
      window.addEventListener("scroll", handleScroll, {passive: true});
      
@@ -43,11 +40,11 @@ export default function NavHeader() {
 
   },[]);
 
-  const {t} = useTranslation();
+  const {t} = useTranslation(); 
   const pathname = usePathname();
 
   return (
-    <header className={`${isScrolled ? classes.hide : ""} ${classes.header}`}>
+    <header className={`${isScrolled ? classes.header__scrolled : classes.header__transparent} ${classes.header}`}>
       <nav  className={`${classes.nav}`}>
         <Link href="/">
           <div className={classes.block__img}>

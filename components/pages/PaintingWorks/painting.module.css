@@ -5,6 +5,10 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    background-image: url("/video/painting/fon-painting-img.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .video_bg video {
@@ -325,7 +329,7 @@
     gap: 10px;
 }
 
-.block__btn__navigation button { 
+.block__btn__navigation button {
     font-size: 20px;
     padding: 15px 30px;
 }
@@ -378,9 +382,10 @@
         font-size: 18px;
     }
 
-    .section__card__one{
+    .section__card__one {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
     .section__card__two {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         margin-inline: 5rem;

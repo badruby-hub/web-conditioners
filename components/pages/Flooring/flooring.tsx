@@ -1,6 +1,6 @@
 "use client"
 
-import { BookCheck, BrushCleaning, CircleCheckBig, Grid3x3, Hammer, Layers, PaintbrushVertical, PaintBucket, PaintRoller, Palette, PhoneCall, Shield, Sparkles, Square } from "lucide-react";
+import { BookCheck, CircleCheckBig, Grid3x3, Hammer, Layers, PhoneCall, Shield,Square } from "lucide-react";
 import classes from "./flooring.module.css";
 import { useTranslation } from "react-i18next";
 import { PopUp, PopUpСalculation } from "@/components/Dialog/Popup/PopUp";
@@ -22,7 +22,7 @@ export default function Flooring() {
          loop
          preload="auto"
          >
-            <source src="https://moduhaus.ae/video/painting/fon-painting.mp4" type="video/mp4" />
+            <source src="/video/flooring/fon-flooring.mp4" type="video/mp4" />
          </video>
 
         <div className={classes.shadow_bg}></div>

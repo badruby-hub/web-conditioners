@@ -22,7 +22,7 @@ export default function PlumbingServices() {
          loop
          preload="auto"
          >
-            <source src="https://moduhaus.ae/video/painting/fon-painting.mp4" type="video/mp4" />
+            <source src="video/plumbing/fon-plumbing.mp4" type="video/mp4" />
          </video>
 
         <div className={classes.shadow_bg}></div>

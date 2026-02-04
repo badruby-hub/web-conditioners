@@ -23,7 +23,7 @@ export default function ContactUs() {
          loop
          preload="auto"
          >
-            <source src="https://moduhaus.ae/video/painting/fon-painting.mp4" type="video/mp4" />
+            <source src="/video/contact/fon-contact.mp4" type="video/mp4" />
          </video>
 
         <div className={classes.shadow_bg}></div>

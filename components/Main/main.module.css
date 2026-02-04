@@ -5,11 +5,11 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    background:linear-gradient(#707a8f, #3f485a);
-    /* background-image: url("https://web-conditioners.vercel.app/video/video-poster-bg-fon-2.png"); */
-    /* background-size: cover;
+    background: linear-gradient(#707a8f, #3f485a);
+    background-image: url("https://web-conditioners.vercel.app/video/video-poster-bg-fon-2.png");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
 }
 
 .video_bg video {
@@ -42,7 +42,7 @@
 
 }
 
- .btn__ask {
+.btn__ask {
     text-decoration: none;
     color: #f0f0f0;
     display: block;
@@ -434,7 +434,7 @@
     gap: 10px;
 }
 
-.block__btn__navigation button { 
+.block__btn__navigation button {
     font-size: 20px;
     padding: 15px 30px;
 }
@@ -503,10 +503,11 @@
     .swiper__full__name__author {
         font-size: 18px;
     }
-      .section__card__one {
+
+    .section__card__one {
         grid-template-columns: repeat(3, minmax(0, 1fr));
     }
-    
+
 }
 
 

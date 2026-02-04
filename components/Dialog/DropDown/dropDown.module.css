@@ -54,7 +54,7 @@
     display: inline-flex;
     position: absolute;
     top: 5px;
-    left: 77px;
+    left: 105%;
     transition: transform 0.25s ease;
 }
 
@@ -74,4 +74,5 @@
         background: linear-gradient(#707a8f, #353b47);
         left: -100px;
     }
+
 }

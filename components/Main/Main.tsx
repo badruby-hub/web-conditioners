@@ -196,7 +196,7 @@ export default function Main() {
                              </div>
                        </div>
                        </Link>
-                       <Link className={classes.link__card} href="#">
+                       <Link className={classes.link__card} href="/drywall">
                         <div className={`${classes.card__team__experts} ${classes.card__one}`}>
                             <div>
                           <div className={classes.bg_container_svg}>

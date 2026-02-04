@@ -6,13 +6,16 @@
     width: 100%;
     height: 97px;
     z-index: 99;
-    background: linear-gradient(.25turn, #3f485a, #707a8f);
-    transition: .5s;
+    transition: background 0.3s ease, backdrop-filter 0.3s;
 
 }
 
-.hide {
-    transform: translateY(-100%);
+.header__transparent {
+    background: transparent;
+}
+
+.header__scrolled {
+    background-color: rgba(63, 72, 90, 0.9);
 }
 
 .nav {

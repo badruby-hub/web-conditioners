@@ -25,6 +25,7 @@ export const DropDown = ({onItemClick}: DropDownProps) =>{
     {href: "/plumbing", label: t("plumbing")},
     {href: "/flooring", label: t("flooring")},
     {href: "/electrical", label: t("electrical")},
+    {href: "/drywall", label: t("gypsum")},
 ]
    return (
           <li
