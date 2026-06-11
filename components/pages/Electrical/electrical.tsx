@@ -30,7 +30,10 @@ export default function Electrical() {
         <div className={classes.video_bg_content}>
             <h1>{t("Профессиональные электромонтажные услуги")}</h1>
             <p>{t("Безопасные, надежные электрические установки и ремонт от лицензированных электриков. Питаем ваш дом с экспертностью и заботой.")}</p>
-            <Link className={classes.btn__ask__bg} href="tel:+971588125032"><span><PhoneCall size={17}/>{t("Emergency call")}</span></Link>
+                <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask__bg} href="tel:+971588125032"><span>{t("get consultation")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask__bg} href="https://wa.me/971588125032"><span>{t("WhatsApp consultation")} <FaWhatsapp size={25}/></span></Link>
+            </div>
         </div>
       </section>
       {/* BLOCK-2 */}

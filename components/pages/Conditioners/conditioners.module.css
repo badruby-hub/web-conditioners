@@ -40,7 +40,7 @@
     max-width: 37rem;
 }
 
-.video_bg_content .btn__ask__bg  {
+.video_bg_content .btn__ask__bg {
     padding: 10px;
     font-weight: 600;
     font-size: 15px;
@@ -51,8 +51,9 @@
     cursor: pointer;
     text-decoration: none;
 }
-.btn__ask__bg span { 
-        display: flex;
+
+.btn__ask__bg span {
+    display: flex;
     align-items: center;
     gap: 10px;
 }
@@ -74,7 +75,8 @@
     min-width: 260px;
 }
 
-.btn__ask:nth-child(2) {
+.btn__ask:nth-child(2),
+.btn__ask__bg:nth-child(2) {
     background: linear-gradient(0.25turn, #02783b, #03ef5a);
 }
 
@@ -342,7 +344,7 @@
 }
 
 
-.btn__get__quote{
+.btn__get__quote {
     color: white;
     text-decoration: none;
 }

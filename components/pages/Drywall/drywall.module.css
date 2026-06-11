@@ -334,6 +334,10 @@
     gap: 10px;
 }
 
+.btn__ask__bg { 
+
+}
+
 
 .btn__ask {
     text-decoration: none;
@@ -352,7 +356,7 @@
     min-width: 260px;
 }
 
-.btn__ask:nth-child(2) {
+.btn__ask__bg:nth-child(2), .btn__ask:nth-child(2) {
     background: linear-gradient(0.25turn, #02783b, #03ef5a);
 }
 
@@ -372,10 +376,6 @@
     text-decoration: none;
 }
 
-.btn__ask span::after {
-    content: "➔";
-    font-size: 20px;
-}
 
 .block__btn__ask {
     display: flex;

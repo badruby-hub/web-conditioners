@@ -52,8 +52,9 @@
     cursor: pointer;
     text-decoration: none;
 }
-.btn__ask__bg span { 
-        display: flex;
+
+.btn__ask__bg span {
+    display: flex;
     align-items: center;
     gap: 10px;
 }
@@ -335,7 +336,7 @@
     min-width: 260px;
 }
 
-.btn__ask:nth-child(2) {
+.btn__ask:nth-child(2), .btn__ask__bg:nth-child(2) {
     background: linear-gradient(0.25turn, #02783b, #03ef5a);
 }
 
@@ -351,10 +352,6 @@
     text-decoration: none;
 }
 
-.btn__ask span::after {
-    content: "➔";
-    font-size: 20px;
-}
 
 .block__btn__ask {
     display: flex;
@@ -385,39 +382,6 @@
     min-width: 260px;
 }
 
-/* 
-.btn__ask {
-    display: block;
-    text-decoration: none;
-    color: #f0f0f0;
-    padding: 10px;
-    font-weight: 600;
-    background: linear-gradient(0.25turn, #3f485a, #707a8f);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0px 10px 7px 0px rgba(0, 0, 0, 0.2);
-}
-
-.btn__ask span {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.btn__ask a {
-    color: white;
-    text-decoration: none;
-}
-
-.btn__ask span::before {
-    content: "➔";
-    font-size: 20px;
-}
-
-.btn__ask:hover {
-    opacity: .9;
-} */
 
 @media(min-width: 550px) {
     .block__btn__ask {
