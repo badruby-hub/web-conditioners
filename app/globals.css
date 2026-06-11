@@ -23,7 +23,6 @@ main {
 
 .footer {
   background: #e5e5e5;
-  padding-inline: 15px;
   flex-shrink: 0;
 }
 

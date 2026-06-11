@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { PopUp, PopUpСalculation } from "@/components/Dialog/Popup/PopUp";
 import { useState } from "react";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 
 export default function PaintingWorks() {
@@ -29,7 +30,7 @@ export default function PaintingWorks() {
         <div className={classes.video_bg_content}>
             <h1>{t("Professional painting services")}</h1>
             <p>{t("Transform your space")}</p>
-            <Link className={classes.btn__ask} href="tel:+971588125032"><span><PhoneCall size={17}/>{t("request a technician")}</span></Link>
+            <Link className={classes.btn__ask__bg} href="tel:+971588125032"><span><PhoneCall size={17}/>{t("Emergency call")}</span></Link>
         </div>
       </section>
       {/* BLOCK-2 */}
@@ -49,7 +50,12 @@ export default function PaintingWorks() {
                           <PaintRoller size={34}/>
                           </div>
                           <h5>{t("Interior Painting")}</h5>
-                          <p>{t("Professional interior")}</p>
+                            <p>{t("Professional interior")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
+                          
                        </div>
                        <div className={`${classes.card__fast__service} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -57,6 +63,10 @@ export default function PaintingWorks() {
                           </div>
                           <h5>{t("Exterior Painting")}</h5>
                           <p>{t("Weather-resistant")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__extended__warranty} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -64,6 +74,10 @@ export default function PaintingWorks() {
                           </div>
                           <h5>{t("Color Consultation")}</h5>
                           <p>{t("Expert guidance")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__team__experts} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -71,6 +85,10 @@ export default function PaintingWorks() {
                           </div>
                           <h5>{t("Wallpaper Installation")}</h5>
                           <p>{t("Professional wallpaper")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
             </div>
       </section>
@@ -81,7 +99,7 @@ export default function PaintingWorks() {
                   <h1>{t("get consultation")}</h1>
                   <p>{t("contact us today")}</p>
                   <div className={classes.block__btn__navigation}>
-                    <Link className={classes.btn__ask} href="tel:+971588125032"><span>{t("call")}</span></Link>
+                    <Link className={classes.btn__ask__emergency} href="tel:+971588125032"><span>{t("call")}</span></Link>
                   </div>
           </div>
       </section>
@@ -120,7 +138,7 @@ export default function PaintingWorks() {
                   <h1>{t("Get Professional Painting Services Today")}</h1>
                   <p>{t("Transform your home or")}</p>
                   <div className={classes.block__btn__navigation}>
-                    <Link className={classes.btn__ask} href="tel:+971588125032"><span>{t("call now")}</span></Link>
+                    <Link className={classes.btn__ask__emergency} href="tel:+971588125032"><span>{t("call now")}</span></Link>
                   </div>
           </div>
       </section>

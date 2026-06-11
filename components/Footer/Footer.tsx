@@ -10,6 +10,16 @@ import { useTranslation } from "react-i18next";
 export default function Footer() {
   const {t} = useTranslation();
     return <>
+    <section className={classes.section__we__work}>
+      <div className={classes.block__we__work}>
+        <h1>{t("THE AREAS WHERE WE WORK")}</h1>
+        <h3>{t("Painting apartments, villas, offices all over Dubai.")}</h3>
+        <div className={classes.block__text}>
+           <p>{t("Painting apartments in Dubai Marina")}</p>
+           <p>{t("We also carry out apartment painting")}</p>
+        </div>
+      </div>
+    </section>
     <section className={classes.container__footer}>
       <section className={classes.one__block__footer}>
       <Link href="/">
@@ -31,7 +41,7 @@ export default function Footer() {
         <h2 className={classes.h__two}>{t("follow")}</h2>
         <ul>
           <li className={`${classes.text} ${classes.text__facebook} ${classes.block__media}`}>
-         <Link href="https://www.facebook.com/share/177cJ5TqaJ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><Facebook className={`${classes.facebook} ${classes.icon}`}/></Link>
+         <Link href="https://www.facebook.com/share/177cJ5TqaJ/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"><Facebook  className={`${classes.facebook} ${classes.icon}`}/></Link>
           </li>
           <li className={`${classes.text} ${classes.text__instagram} ${classes.block__media}`}>
             <Link href="https://www.instagram.com/moduhaus.ae?igsh=MWk5YnIyejZ3am1iag%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer"><Instagram className={`${classes.instagram} ${classes.icon}`}/></Link>

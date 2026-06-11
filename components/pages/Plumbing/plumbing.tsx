@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { PopUp, PopUpСalculation } from "@/components/Dialog/Popup/PopUp";
 import { useState } from "react";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 
 export default function PlumbingServices() {
@@ -29,7 +30,7 @@ export default function PlumbingServices() {
         <div className={classes.video_bg_content}>
             <h1>{t("Professional plumbing services")}</h1>
             <p>{t("From emergency repairs")}</p>
-            <Link href="tel:+971588125032" className={classes.btn__ask}><span><PhoneCall size={17}/>{t("request a technician")}</span></Link>
+            <Link href="tel:+971588125032" className={classes.btn__ask__bg}><span><PhoneCall size={17}/>{t("Emergency call")}</span></Link>
         </div>
       </section>
       {/* BLOCK-2 */}
@@ -50,6 +51,10 @@ export default function PlumbingServices() {
                           </div>
                           <h5>{t("Leak Detection & Repair")}</h5>
                           <p>{t("We quickly identify")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__fast__service} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -57,6 +62,10 @@ export default function PlumbingServices() {
                           </div>
                           <h5>{t("Drain Cleaning & Unclogging")}</h5>
                           <p>{t("Professional drain cleaning")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__extended__warranty} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -64,6 +73,10 @@ export default function PlumbingServices() {
                           </div>
                           <h5>{t("Pipe Installation & Repair")}</h5>
                           <p>{t("Expert pipe installation")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__team__experts} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -71,6 +84,10 @@ export default function PlumbingServices() {
                           </div>
                           <h5>{t("Water Heater Services")}</h5>
                           <p>{t("Installation, repair,")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
             </div>
       </section>
@@ -81,7 +98,7 @@ export default function PlumbingServices() {
                   <h1>{t("get consultation")}</h1>
                   <p>{t("contact us today")}</p>
                   <div className={classes.block__btn__navigation}>
-                    <Link className={classes.btn__ask} href="tel:+971588125032"><span>{t("call")}</span></Link>
+                    <Link className={classes.btn__ask__emergency} href="tel:+971588125032"><span>{t("call")}</span></Link>
                   </div>
           </div>
       </section>
@@ -120,7 +137,7 @@ export default function PlumbingServices() {
                   <h1>{t("Get Professional Plumbing Help Today")}</h1>
                   <p>{t("Experienced plumbers ready")}</p>
                   <div className={classes.block__btn__navigation}>
-                  <Link className={classes.btn__ask} href="tel:+971588125032"><span>{t("call now")}</span></Link>
+                  <Link className={classes.btn__ask__emergency} href="tel:+971588125032"><span>{t("call now")}</span></Link>
                   </div>
           </div>
       </section>

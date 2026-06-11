@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { PopUp, PopUpСalculation } from "@/components/Dialog/Popup/PopUp";
 import { useState } from "react";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 
 export default function Main() {
@@ -29,7 +30,7 @@ export default function Main() {
         <div className={classes.video_bg_content}>
             <h1>{t("ducted ac")}</h1>
             <p>{t("professional climate")}</p>
-            <Link className={classes.btn__ask} href="tel:+971588125032"><span><PhoneCall size={17}/>{t("request a technician")}</span></Link>
+            <Link className={classes.btn__ask__bg} href="tel:+971588125032"><span><PhoneCall size={17}/>{t("Emergency call")}</span></Link>
         </div>
       </section>
       {/* BLOCK-2 */}
@@ -50,6 +51,10 @@ export default function Main() {
                           </div>
                           <h5>{t("ducted ac installation")}</h5>
                           <p>{t("complete installation")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__fast__service} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -57,6 +62,10 @@ export default function Main() {
                           </div>
                           <h5>{t("ac repair")}</h5>
                           <p>{t("expert repair")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__extended__warranty} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -64,6 +73,10 @@ export default function Main() {
                           </div>
                           <h5>{t("system diagnostics")}</h5>
                           <p>{t("advanced diagnostic")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__team__experts} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -71,6 +84,10 @@ export default function Main() {
                           </div>
                           <h5>{t("energy optimization")}</h5>
                           <p>{t("optimize your")}</p>
+                          <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
             </div>
       </section>
@@ -130,9 +147,10 @@ export default function Main() {
                     <li><Shield/>{t("30-day")}</li>
                    </ul>
                    <footer className={classes.footer}>
-                      <button onClick={()=> setIsOpenCalc(true)} className={classes.price__btn}>
-                                 <Calculator size={20}/><span>{t("get quote")}</span>
-                      </button>
+                      {/* <button onClick={()=> setIsOpenCalc(true)} для открытия мод окна и оставление заявки  className={classes.price__btn}> */}
+                                 {/* <Calculator size={20}/><span>{t("get quote")}</span> */}
+                                  <Link className={`${classes.btn__ask__a} ${classes.btn__ask}`} href="https://wa.me/971588125032" target="_blank" rel="noopener noreferrer"><span><FaWhatsapp size={25} /> {t("WhatsApp us")} </span></Link>
+                      {/* </button> */}
                    </footer>
                 </article>
                 <article className={classes.price__card}>
@@ -149,9 +167,10 @@ export default function Main() {
                     <li><Shield/>{t("priority support")}</li>
                    </ul>
                    <footer className={classes.footer}>
-                      <button onClick={()=> setIsOpenCalc(true)} className={classes.price__btn}>
-                                 <Calculator size={20}/><span>{t("get quote")}</span>
-                      </button>
+                      {/* <button onClick={()=> setIsOpenCalc(true)} для открытия окна и оставления заявки className={classes.price__btn}> */}
+                                 {/* <Calculator size={20}/><span>{t("get quote")}</span> */}
+                                  <Link className={`${classes.btn__ask__a} ${classes.btn__ask}`} href="https://wa.me/971588125032" target="_blank" rel="noopener noreferrer"><span><FaWhatsapp size={25} />{t("WhatsApp us")} </span></Link>
+                      {/* </button> */}
                    </footer>
                 </article>
                 <article className={classes.price__card}>
@@ -168,9 +187,10 @@ export default function Main() {
                     <li><Shield/>{t("24/7 support")}</li>
                    </ul>
                    <footer className={classes.footer}>
-                      <button onClick={()=> setIsOpenCalc(true)} className={classes.price__btn}>
-                                 <Calculator size={20}/><span>{t("get quote")}</span>
-                      </button>
+                      {/* <button onClick={()=> setIsOpenCalc(true)}  для открытия окна и оставления заявки  className={classes.price__btn}> */}
+                                 {/* <Calculator size={20}/><span>{t("get quote")}</span> */}
+                                 <Link className={`${classes.btn__ask__a} ${classes.btn__ask}`} href="https://wa.me/971588125032" target="_blank" rel="noopener noreferrer"><span><FaWhatsapp size={25} />{t("WhatsApp us")}</span></Link>
+                      {/* </button> */}
                    </footer>
                 </article>
            </div>

@@ -13,7 +13,7 @@ export const PopOverHeader = () =>{
     const {t} = useTranslation();
     return (
     <Popover className={classes.block__popOver}>
-        {({open})=>(
+        {({open, close})=>(
             <>
         <PopoverButton className={classes.btn__ask}>
             <span><PhoneCall size={17}/>{t("contact")}</span>
@@ -27,7 +27,7 @@ export const PopOverHeader = () =>{
             leaveFrom={`${classes.transitionLeaveFrom}`}
             leaveTo={`${classes.transitionLeaveTo}`}
           >
-        <PopoverPanel className={`${classes.panel}`}>
+        <PopoverPanel onClick={close} className={`${classes.panel}`}>
             <ul  className={`${classes.panel_ul}`}>
                 <li className={`${classes.phone_number} ${classes.link}`}><Link href="tel:+971588125032">+&#40;971&#41;58-812-5032</Link></li>
                 <li className={`${classes.li_telegram} ${classes.link}`}><Link href="https://t.me/ModuHaus" target="_blank" rel="noopener noreferrer"><div className={`${classes.block_telegram} ${classes.block_media_icon}`}><Send size={34} className={`${classes.telegram} ${classes.icon}`}/></div></Link></li>

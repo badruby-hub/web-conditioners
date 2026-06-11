@@ -6,6 +6,7 @@ import { useTranslation } from "react-i18next";
 import { PopUp, PopUpСalculation } from "@/components/Dialog/Popup/PopUp";
 import { useState } from "react";
 import Link from "next/link";
+import { FaWhatsapp } from "react-icons/fa";
 
 
 export default function Electrical() {
@@ -29,7 +30,7 @@ export default function Electrical() {
         <div className={classes.video_bg_content}>
             <h1>{t("Профессиональные электромонтажные услуги")}</h1>
             <p>{t("Безопасные, надежные электрические установки и ремонт от лицензированных электриков. Питаем ваш дом с экспертностью и заботой.")}</p>
-            <Link className={classes.btn__ask} href="tel:+971588125032"><span><PhoneCall size={17}/>{t("request a technician")}</span></Link>
+            <Link className={classes.btn__ask__bg} href="tel:+971588125032"><span><PhoneCall size={17}/>{t("Emergency call")}</span></Link>
         </div>
       </section>
       {/* BLOCK-2 */}
@@ -50,6 +51,10 @@ export default function Electrical() {
                           </div>
                           <h5>{t("Проводка и перепроводка")}</h5>
                           <p>{t("Профессиональная установка электропроводки и модернизация для безопасного, надежного электропитания.")}</p>
+                           <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__fast__service} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -57,6 +62,10 @@ export default function Electrical() {
                           </div>
                           <h5>{t("Установка освещения")}</h5>
                           <p>{t("Экспертная установка внутренних и наружных осветительных приборов и систем.")}</p>
+                           <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__extended__warranty} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -64,6 +73,10 @@ export default function Electrical() {
                           </div>
                           <h5>{t("Модернизация панелей")}</h5>
                           <p>{t("Модернизация электрических панелей для безопасной обработки современных требований к электропитанию.")}</p>
+                           <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
                        <div className={`${classes.card__team__experts} ${classes.card__one}`}>
                           <div className={classes.bg_container_svg}>
@@ -71,6 +84,10 @@ export default function Electrical() {
                           </div>
                           <h5>{t("Установка розеток и выключателей")}</h5>
                           <p>{t("Установка розеток, выключателей, USB-портов и защиты GFCI.")}</p>
+                           <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("Emergency call")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp us")} <FaWhatsapp size={25} /></span></Link>
+            </div>
                        </div>
             </div>
       </section>
@@ -81,7 +98,7 @@ export default function Electrical() {
                   <h1>{t("get consultation")}</h1>
                   <p>{t("contact us today")}</p>
                   <div className={classes.block__btn__navigation}>
-                    <Link className={classes.btn__ask} href="tel:+971588125032"><span>{t("call")}</span></Link>
+                    <Link className={classes.btn__ask__emergency} href="tel:+971588125032"><span>{t("call")}</span></Link>
                   </div>
           </div>
       </section>
@@ -120,7 +137,7 @@ export default function Electrical() {
                   <h1>{t("Получите профессиональное электромонтажное обслуживание сегодня")}</h1>
                   <p>{t("Лицензированные электрики готовы справиться с любым электрическим проектом. Гарантированное безопасное и надежное обслуживание.")}</p>
                   <div className={classes.block__btn__navigation}>
-                    <Link className={classes.btn__ask} href="tel:+971588125032"><span>{t("call now")}</span></Link>
+                    <Link className={classes.btn__ask__emergency} href="tel:+971588125032"><span>{t("call now")}</span></Link>
                   </div>
           </div>
       </section>

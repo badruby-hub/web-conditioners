@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
-import { ChevronRight, Columns3Cog, Droplet, Hammer, Lightbulb, Paintbrush, Star, Wind } from "lucide-react";
+import { ChevronRight, Columns3Cog, Droplet, Hammer, Lightbulb, Paintbrush, PhoneCall, Star, Wind } from "lucide-react";
 import Link from "next/link";
 import { Reviews } from "./main.props";
 import { useTranslation } from "react-i18next";
@@ -19,6 +19,7 @@ import { Comparison } from "./main.props";
 
 import { PopUp } from "../Dialog/Popup/PopUp";
 import Split from "../Split/split";
+import { FaWhatsapp } from "react-icons/fa";
 
 type Lang = "ru" | "en";
 
@@ -47,7 +48,11 @@ export default function Main() {
         <div className={classes.video_bg_content}>
             <h1>moduhaus</h1>
             <p>{t("modern")}</p>
-            <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("get consultation")}</span></Link>
+            <div className={classes.block__btn__ask}>
+              <Link  className={classes.btn__ask} href="tel:+971588125032"><span>{t("get consultation")}<PhoneCall size={20}/></span></Link>
+              <Link  className={classes.btn__ask} href="https://wa.me/971588125032"><span>{t("WhatsApp consultation")} <FaWhatsapp size={25}/></span></Link>
+            </div>
+            
         </div>
       </section>
            {/*BLOCK-1*/}

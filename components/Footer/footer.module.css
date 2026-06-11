@@ -73,7 +73,7 @@
     padding-inline: 25px;
 }
 
-.h__two{
+.h__two {
     font-size: 15px;
 }
 
@@ -85,30 +85,82 @@
     font-size: 15px;
     padding: 8px;
 }
+
 .text__mail {
     font-size: 13px;
 }
-.text__mail svg{
+
+.text__mail svg {
     flex-shrink: 0;
+}
+
+
+/* block where we work */
+
+.section__we__work {
+    background-color: #f0ffff;
+}
+
+.block__we__work {
+    display: flex;
+    flex-direction: column;
+}
+
+.block__we__work h1 {
+    font-weight: 700;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.block__we__work h3 {
+    text-transform: uppercase;
+    color: #707a8f;
+    font-weight: 700;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+
+.block__text {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.block__text p {
+    margin: 40px;
+    font-size: 17;
+    max-width: 570px;
+}
+
+@media(min-width: 600px){
+    .block__text {
+        flex-direction: row;
+    }
 }
 
 @media(min-width:770px) {
     .container__footer {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-    .h__two{
+
+    .h__two {
         font-size: 22px;
     }
-    .text{
+
+    .text {
         font-size: 17px;
     }
-    .text__mail{
+
+    .text__mail {
         font-size: 13px;
     }
 }
 
-.hr{
-    margin-inline: 4rem ;
+.hr {
+    margin-inline: 4rem;
 }
 
 @media(min-width:1020px) {
