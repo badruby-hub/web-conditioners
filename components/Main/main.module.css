@@ -550,4 +550,15 @@
     .blocks__img__my__work {
         padding-inline: 15px;
     }
+
+}
+
+
+
+
+@media(min-width:1725px) {
+
+    .video_bg video {
+    object-fit: cover;
+}
 }
