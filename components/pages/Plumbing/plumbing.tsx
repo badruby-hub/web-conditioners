@@ -16,14 +16,17 @@ export default function PlumbingServices() {
 
     return <>
         <section className={`${classes.video_bg}`}>
-        <video  
+        <video
+         poster="/video/plumbing/poster-plumbing.jpg"
          autoPlay
          muted
          playsInline
          loop
-         preload="auto"
+         preload="metadata"
          >
-            <source src="video/plumbing/fon-plumbing.mp4" type="video/mp4" />
+            <source src="/video/plumbing/fon-plumbing-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+            <source src="/video/plumbing/fon-plumbing.webm" type="video/webm" />
+            <source src="/video/plumbing/fon-plumbing.mp4" type="video/mp4" />
          </video>
 
         <div className={classes.shadow_bg}></div>

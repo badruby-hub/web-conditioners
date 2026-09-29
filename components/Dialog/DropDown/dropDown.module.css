@@ -14,7 +14,32 @@
     z-index: 90;
 
     border-radius: 10px;
+    transform-origin: top center;
+    animation: menu-in 0.35s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
 
+.menu li {
+    animation: item-in 0.4s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.menu li:nth-child(2) { animation-delay: 0.04s; }
+.menu li:nth-child(3) { animation-delay: 0.08s; }
+.menu li:nth-child(4) { animation-delay: 0.12s; }
+.menu li:nth-child(5) { animation-delay: 0.16s; }
+.menu li:nth-child(6) { animation-delay: 0.2s; }
+
+@keyframes menu-in {
+    from {
+        opacity: 0;
+        transform: translateY(-8px) scale(0.96);
+    }
+}
+
+@keyframes item-in {
+    from {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
 }
 
 .menu li {
@@ -25,6 +50,11 @@
     display: block;
     margin: 5px 12px;
     padding-bottom: 8px;
+    transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-size 0.3s;
+}
+
+.item:hover {
+    transform: translateX(6px);
 }
 
 .item:hover {

@@ -6,6 +6,8 @@ import "./i18n";
 import I18nProvider from "@/components/I18nProvider/I18nProvider";
 import Script from "next/script";
 import { Toaster } from "react-hot-toast";
+import MotionProvider from "@/components/Motion/MotionProvider";
+import { FaWhatsapp } from "react-icons/fa";
 
 
 export const metadata: Metadata = {
@@ -84,6 +86,10 @@ export default function RootLayout({
         <footer className="footer">
            <Footer/>
         </footer> 
+        <MotionProvider/>
+        <a className="fab-whatsapp" href="https://wa.me/971588125032" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <FaWhatsapp size={30}/>
+        </a>
         </I18nProvider>    
       </body>
     </html>

@@ -16,13 +16,16 @@ export default function Electrical() {
 
     return <>
         <section className={`${classes.video_bg}`}>
-        <video  
+        <video
+         poster="/video/electrical/poster-electrical.jpg"
          autoPlay
          muted
          playsInline
          loop
-         preload="auto"
+         preload="metadata"
          >
+            <source src="/video/electrical/fon-electrical-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+            <source src="/video/electrical/fon-electrical.webm" type="video/webm" />
             <source src="/video/electrical/fon-electrical.mp4" type="video/mp4" />
          </video>
 

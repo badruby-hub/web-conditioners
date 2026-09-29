@@ -12,6 +12,8 @@ i18n
   .use(initReactI18next)
 
   .init({
+    lng:"en",
+    initAsync:false,
     fallbackLng:"en",
     resources:{
         ru:{
@@ -23,5 +25,11 @@ i18n
         }
     }
   });
+
+export const LANG_STORAGE_KEY = "lang";
+
+i18n.on("languageChanged", (lng) => {
+  if (typeof document !== "undefined") document.documentElement.lang = lng;
+});
 
 export default i18n;

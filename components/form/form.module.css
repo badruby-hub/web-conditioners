@@ -53,6 +53,36 @@
     opacity: .9;
 }
 
+/* согласие на обработку персональных данных */
+.consent {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #3f485a;
+    cursor: pointer;
+}
+
+.consent__checkbox {
+    flex-shrink: 0;
+    width: 18px;
+    height: 18px;
+    margin-top: 2px;
+    accent-color: #3f485a;
+    cursor: pointer;
+}
+
+.consent__link {
+    color: #3f485a;
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.consent__link:hover {
+    color: #707a8f;
+}
+
 
 @media(min-width:520px){
     .name_and_number{

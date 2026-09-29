@@ -184,3 +184,36 @@
     padding: 6px;
     border-radius: 5px;
 }
+
+/* анимация открытия и закрытия модальных окон */
+.dialog {
+    position: relative;
+    z-index: 99;
+    transition: opacity 0.3s ease;
+}
+
+.dialog[data-closed] {
+    opacity: 0;
+}
+
+.dialog .bg__dialog {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.panel {
+    transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.panel[data-closed] {
+    opacity: 0;
+    transform: translateY(16px) scale(0.94);
+}
+
+.close__btn {
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.close__btn:hover {
+    transform: rotate(90deg);
+}

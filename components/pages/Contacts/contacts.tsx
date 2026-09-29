@@ -16,13 +16,16 @@ export default function ContactUs() {
     const {t} = useTranslation();
     return <section className={classes.container__contacts}>
                <section className={`${classes.video_bg}`}>
-        <video  
+        <video
+         poster="/video/contact/poster-contact.jpg"
          autoPlay
          muted
          playsInline
          loop
-         preload="auto"
+         preload="metadata"
          >
+            <source src="/video/contact/fon-contact-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+            <source src="/video/contact/fon-contact.webm" type="video/webm" />
             <source src="/video/contact/fon-contact.mp4" type="video/mp4" />
          </video>
 

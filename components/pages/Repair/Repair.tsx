@@ -32,15 +32,17 @@ export default function Repair() {
     return <>
             <section className={`${classes.video_bg}`}>
 
-             <video 
-             poster="https://moduhaus.ae/video/repair/poster-fon-repair-2.png"
+             <video
+             poster="/video/repair/poster-fon-repair-2.jpg"
              autoPlay
              muted
              playsInline
              loop
-             preload="auto"
+             preload="metadata"
             >
-               <source src="https://moduhaus.ae/video/repair/fon-repair-2.mp4" type="video/mp4" />
+               <source src="/video/repair/fon-repair-2-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+               <source src="/video/repair/fon-repair-2.webm" type="video/webm" />
+               <source src="/video/repair/fon-repair-2.mp4" type="video/mp4" />
             </video>
         <div className={classes.shadow_bg}></div>
         <div className={classes.video_bg_content}>
@@ -100,6 +102,7 @@ export default function Repair() {
             </div>
             <div className={classes.block__nav__and__reviews__swiper}>
              <Swiper
+             speed={800}
              loop={true}
              spaceBetween={50}
              allowTouchMove={false}
@@ -143,6 +146,7 @@ export default function Repair() {
             </div>
             <div className={classes.block__nav__and__reviews__swiper}>
              <Swiper
+             speed={800}
              loop={true}
              spaceBetween={50}
              autoplay={{

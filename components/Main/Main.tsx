@@ -34,15 +34,17 @@ export default function Main() {
     return <>
        {/*video bg*/}
       <section className={`${classes.video_bg}`}>
-              <video 
-               poster="https://moduhaus.ae/video/video-poster-bg-fon-2.png"
+              <video
+               poster="/video/video-poster-bg-fon-2.jpg"
                autoPlay
                muted
                playsInline
                loop
-               preload="auto"
+               preload="metadata"
                >
-                <source src="https://moduhaus.ae/video/video-bg-fon-2.mp4" type="video/mp4" />
+                <source src="/video/video-bg-fon-2-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+                <source src="/video/video-bg-fon-2.webm" type="video/webm" />
+                <source src="/video/video-bg-fon-2.mp4" type="video/mp4" />
                </video>
         <div className={classes.shadow_bg}></div> 
         <div className={classes.video_bg_content}>
@@ -316,6 +318,7 @@ export default function Main() {
             </div>
             <div className={classes.block__nav__and__reviews__swiper}>
              <Swiper
+             speed={800}
              loop={true}
              spaceBetween={50}
              allowTouchMove={false}
@@ -359,11 +362,13 @@ export default function Main() {
             </div>
             <div className={classes.block__nav__and__reviews__swiper}>
              <Swiper
+             speed={800}
              loop={true}
              spaceBetween={50}
              autoplay={{
-                delay:2500,
-                disableOnInteraction:false
+                delay:4000,
+                disableOnInteraction:false,
+                pauseOnMouseEnter:true
              }}
              pagination={{
                 el: ".my-pagination" ,

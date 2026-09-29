@@ -26,9 +26,9 @@ interface PopUpCalcProps {
 export const PopUp = ({open, onClose}: PopUpProps)=> {
      const {t}= useTranslation();
 
-   return   <Dialog open={open} onClose={onClose}>
+   return   <Dialog open={open} onClose={onClose} transition className={classes.dialog}>
             <div className={classes.bg__dialog}>
-                <DialogPanel className={classes.popUp_contact_info}>
+                <DialogPanel transition className={`${classes.popUp_contact_info} ${classes.panel}`}>
                      <button className={classes.close__btn} onClick={onClose}>{<RxCross1 size={25}/>}</button>
                     <DialogTitle className={classes.title_contact_info}>{t("contact information")}</DialogTitle>
                      <ul className={classes.ul}>
@@ -143,9 +143,9 @@ const applicationForm = `
                 setIsLoading(false);
             }
          } 
-   return   <Dialog open={openCalc} onClose={onCloseCalc}>
+   return   <Dialog open={openCalc} onClose={onCloseCalc} transition className={classes.dialog}>
             <div className={classes.bg__dialog}>
-                <DialogPanel className={classes.popUp}>
+                <DialogPanel transition className={`${classes.popUp} ${classes.panel}`}>
                      <button className={classes.close__btn} onClick={onCloseCalc}>{<RxCross1 size={25}/>}</button>
                     <DialogTitle className={classes.title}>{t("choose your plan")}</DialogTitle>
                   <form onSubmit={sendEmailTelegram} className={classes.form}>

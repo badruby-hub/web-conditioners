@@ -16,14 +16,17 @@ export default function Main() {
 
     return <>
         <section className={`${classes.video_bg}`}>
-        <video  
+        <video
+         poster="/video/conditioners/conditioners-poster-fon-2.jpg"
          autoPlay
          muted
          playsInline
          loop
-         preload="auto"
+         preload="metadata"
          >
-            <source src="https://moduhaus.ae/video/conditioners/conditioners-2.mp4" type="video/mp4" />
+            <source src="/video/conditioners/conditioners-2-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+            <source src="/video/conditioners/conditioners-2.webm" type="video/webm" />
+            <source src="/video/conditioners/conditioners-2.mp4" type="video/mp4" />
          </video>
 
         <div className={classes.shadow_bg}></div>

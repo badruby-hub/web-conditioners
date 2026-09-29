@@ -77,3 +77,80 @@
     border-radius: 50px;
     font-size: 15px;
 }
+
+/* анимации слайдера «до/после» */
+.line {
+    transition: width 0.3s ease;
+}
+
+.line:hover {
+    width: 7px;
+}
+
+.btn__split {
+    position: relative;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.btn__split::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid white;
+    animation: split-pulse 2s ease-out infinite;
+}
+
+.line:hover .btn__split,
+.line:active .btn__split {
+    transform: scale(1.15);
+}
+
+.ArrowRightLeft {
+    transition: color 0.3s ease;
+    animation: split-hint 2.4s ease-in-out infinite;
+}
+
+.line:active .ArrowRightLeft {
+    animation: none;
+}
+
+.before,
+.after {
+    animation: label-in 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.3s backwards;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+@keyframes split-pulse {
+    from {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1.7);
+        opacity: 0;
+    }
+}
+
+@keyframes split-hint {
+    0%, 100% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-3px);
+    }
+
+    75% {
+        transform: translateX(3px);
+    }
+}
+
+@keyframes label-in {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}

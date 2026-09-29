@@ -4,6 +4,7 @@ import { useTranslation } from "react-i18next"
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { sendConversion } from "../lib/gtag";
+import Link from "next/link";
 
 
 export default function Form() {
@@ -11,15 +12,21 @@ export default function Form() {
     const [firstName, setFirstName] = useState<string>("");
     const [phoneNumber, setPhoneNumber] = useState<string>("");
     const [details, setDetails] = useState<string>("");
+    const [consent, setConsent] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<Boolean>(false);
       const resetForm=()=>{
               setFirstName("");
               setPhoneNumber("");
               setDetails("");
+              setConsent(false);
    };
 
     const sendEmailTelegram = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
+        if (!consent) {
+            toast.error(t("consent required"));
+            return;
+        }
         const form = event.currentTarget;
         const {firstName,numberPhone,details} = Object.fromEntries(new FormData(form).entries());
 
@@ -64,6 +71,13 @@ export default function Form() {
         <input className={`${classes.name__phone__number} ${classes.input}`} value={phoneNumber} onChange={(e)=>{setPhoneNumber(e.target.value)}} type="text" required name="numberPhone" placeholder={t("numberPhone")} />
             </div>
          <textarea className={`${classes.details} ${classes.input}`} value={details} onChange={(e)=>{setDetails(e.target.value)}} name="details" id="details" required placeholder={t("details")} maxLength={150} rows={5}></textarea>
+         <label className={classes.consent}>
+            <input className={classes.consent__checkbox} type="checkbox" name="consent" checked={consent} onChange={(e)=>setConsent(e.target.checked)} required />
+            <span>
+                {t("consent agree")}{" "}
+                <Link href="/privacy" target="_blank" className={classes.consent__link}>{t("consent policy")}</Link>.
+            </span>
+         </label>
          <button className={classes.btn__ask}><span><Mail size={17}/>{isLoading ? t("loading") : t("submit request")}</span></button>
         </form>
     )

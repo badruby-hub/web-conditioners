@@ -16,13 +16,16 @@ export default function Drywall() {
 
     return <>
         <section className={`${classes.video_bg}`}>
-        <video  
+        <video
+         poster="/video/drywall/poster-drywall.jpg"
          autoPlay
          muted
          playsInline
          loop
-         preload="auto"
+         preload="metadata"
          >
+            <source src="/video/drywall/fon-drywall-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+            <source src="/video/drywall/fon-drywall.webm" type="video/webm" />
             <source src="/video/drywall/fon-drywall.mp4" type="video/mp4" />
          </video>
 

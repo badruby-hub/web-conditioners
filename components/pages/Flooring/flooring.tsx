@@ -16,13 +16,16 @@ export default function Flooring() {
 
     return <>
         <section className={`${classes.video_bg}`}>
-        <video  
+        <video
+         poster="/video/flooring/poster-flooring.jpg"
          autoPlay
          muted
          playsInline
          loop
-         preload="auto"
+         preload="metadata"
          >
+            <source src="/video/flooring/fon-flooring-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+            <source src="/video/flooring/fon-flooring.webm" type="video/webm" />
             <source src="/video/flooring/fon-flooring.mp4" type="video/mp4" />
          </video>
 

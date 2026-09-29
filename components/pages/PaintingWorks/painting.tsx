@@ -16,13 +16,16 @@ export default function PaintingWorks() {
 
     return <>
         <section className={`${classes.video_bg}`}>
-        <video  
+        <video
+         poster="/video/painting/fon-painting-img.jpg"
          autoPlay
          muted
          playsInline
          loop
-         preload="auto"
+         preload="metadata"
          >
+            <source src="/video/painting/fon-painting-mobile.mp4" type="video/mp4" media="(max-width: 767px)" />
+            <source src="/video/painting/fon-painting.webm" type="video/webm" />
             <source src="/video/painting/fon-painting.mp4" type="video/mp4" />
          </video>
 
