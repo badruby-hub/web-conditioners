@@ -35,6 +35,7 @@
 
 
 .section__card__one {
+    width: 100%;
     max-width: 1200px;
     display: grid;
     gap: 24px;
@@ -43,7 +44,8 @@
 .card__one {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    flex-grow: 1;
+    width: 100%;
 
     background: #dfe0df;
     border-radius: 10px;
@@ -188,6 +190,8 @@
 
 
 .link__card {
+    /* ссылка — ячейка сетки; flex растягивает карточку внутри на всю высоту строки */
+    display: flex;
     text-decoration: none;
     color: #000000;
 }
@@ -197,7 +201,9 @@
     align-items: center;
     color: #0000ff;
     font-size: 15px;
-    margin-top: 10px;
+    /* «Подробнее» всегда внизу карточки, при любой длине текста */
+    margin-top: auto;
+    padding-top: 10px;
 }
 
 .arrow {
